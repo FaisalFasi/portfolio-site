@@ -8,6 +8,11 @@ export default {
       poppinFont: ["Poppins", "sans-sarif"],
       zeyadaFont: ["Zeyada", "cursive"],
     },
+    // dropShadow: {
+    //   bottom: ["0 35px 35px rgba(0, 0, 0, 0.25)"],
+    //   top: ["0 35px 35px rgba(0, 0, 0, 0.25)"],
+    //   topBottom: ["0 35px 35px rgba(0, 0, 0, 0.25)"],
+    // },
   },
   plugins: [],
 };

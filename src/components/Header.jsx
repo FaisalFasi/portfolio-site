@@ -54,13 +54,13 @@ const Header = () => {
       </div>
       {/* ul list  */}
       <ul
-        className={` z-10 md:flex gap-2 md:gap-4 text-center md:items-center p-8 md:p-0 absolute md:static bg-[rgba(255,255,255,0.7)]  md:bg-none  md:z-auto left-0 w-full   md:w-auto   transition-all duration-500 ease-out font-nuntinoFont font-extrabold text-lg   ${
-          isNavbarOpen ? "h-screen top-0 mt-8 md:mt-0" : "top-[-490px]"
+        className={` z-10 md:flex gap-2 md:gap-4 text-center md:items-center p-8 md:p-0 absolute md:static  bg-[rgba(255,255,255,0.92)]  md:bg-none  md:z-auto left-0 w-full   md:w-auto   transition-all duration-500 ease-out font-nuntinoFont font-extrabold text-lg   ${
+          isNavbarOpen ? "h-screen top-0 pt-12 md:mt-8" : "top-[-490px]"
         }`}
       >
         {navbarLinks.map((link, index) => {
           return (
-            <li key={index} className=" pt-4 md:pt-0">
+            <li key={index} className=" pt-8 md:pt-0">
               <Link
                 to={link._link}
                 onClick={() => handleNavLinkClick(link._scrollTo)}

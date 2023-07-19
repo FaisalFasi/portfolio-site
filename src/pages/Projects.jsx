@@ -5,6 +5,9 @@ import { FiExternalLink } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
 import { DiReact } from "react-icons/di";
 import { BiLogoTailwindCss } from "react-icons/bi";
+import { AiFillLinkedin } from "react-icons/ai";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { AiFillFacebook } from "react-icons/ai";
 
 import Card from "../components/Card";
 import RepositoryCard from "../components/RepositoryCard";
@@ -20,8 +23,8 @@ const projectDetails = [
     projectImg: "/images/img-1.png",
     paddingLeftRight: "lg:pl-[15%] lg:pr-24",
     titlePos: "lg:left-0",
-    websiteLink: "",
-    gitHubLink: "",
+    websiteLink: "https://faisalrehman.netlify.app",
+    gitHubLink: "https://github.com/FaisalFasi/Faisal-Rehman-Portfolio",
   },
   {
     title: "Netflix Clone",
@@ -31,8 +34,8 @@ const projectDetails = [
     projectImg: "/images/img-2.png",
     paddingLeftRight: "lg:pr-[15%] lg:pl-24",
     titlePos: "lg:right-0",
-    websiteLink: "",
-    gitHubLink: "",
+    websiteLink: "https://netflix-clone-version-0.netlify.app",
+    gitHubLink: "https://github.com/FaisalFasi/react-netflix-clone-project",
   },
   {
     title: "Qwerty Friend",
@@ -42,8 +45,8 @@ const projectDetails = [
     projectImg: "/images/img-3.png",
     paddingLeftRight: "lg:pr-[15%] lg:pl-24",
     titlePos: "lg:left-0",
-    websiteLink: "",
-    gitHubLink: "",
+    websiteLink: "https://qwerty-friend.netlify.app",
+    gitHubLink: "https://github.com/FaisalFasi/qwerty-friend",
   },
 ];
 
@@ -52,11 +55,13 @@ const repositoriesInfo = [
     title: "Portfolio",
     language: "ReactJS",
     description: "Personal website build with ReactJS and Tailwind CSS.",
+    projectLink: "https://github.com/FaisalFasi/Faisal-Rehman-Portfolio",
   },
   {
     title: "Piano App",
     language: "ReactJS",
     description: "Piano app build with ReactJS and Tailwind CSS.",
+    projectLink: "https://github.com/FaisalFasi/react-piano-project",
   },
 ];
 
@@ -74,6 +79,7 @@ const Projects = () => {
             A quick collection of my projects.
           </p>
         </div>
+        {/* projects section  */}
         {projectDetails.map((project) => {
           return (
             <Card
@@ -83,10 +89,13 @@ const Projects = () => {
               projectImg={project.projectImg}
               paddingLeftRight={project.paddingLeftRight}
               titlePos={project.titlePos}
+              websiteLink={project.websiteLink}
+              gitHubLink={project.gitHubLink}
             />
           );
         })}
       </div>
+      {/* repository section  */}
       <div>
         <div className="flex  flex-col items-center mt-20">
           <h1 className="my-2 text-center text-5xl font-nuntinoFont font-extrabold text-[#1a202c]">
@@ -111,10 +120,10 @@ const Projects = () => {
           return <RepositoryCard repo={repo} />;
         })}
       </div>
-      <div className="px-8">
-        <div>
-          <p>© 2023 Faisal Rehman</p>
-          <div className="flex items-center">
+      <div className="">
+        <div className="flex flex-col md:flex-row items-center md:justify-between  px-8   py-6 bg-[#f7fafc] ">
+          <p className="mt-6">© 2023 Faisal Rehman</p>
+          <div className="flex items-center mt-6">
             <span> {"Built with: "}</span>
             <pre> </pre>
             <a href="https://react.dev/" className="mx-1 bg-black rounded-full">
@@ -126,6 +135,40 @@ const Projects = () => {
               className="mx-1 bg-black rounded-full"
             >
               <BiLogoTailwindCss className="text-white" />
+            </a>
+          </div>
+          <div className="flex mt-6">
+            <a
+              href="https://github.com/FaisalFasi"
+              target="_blank"
+              title="GitHub"
+              className="bg-gray-200 p-2 rounded-full mr-4 hover:bg-gray-400 "
+            >
+              <AiFillGithub className="w-5 h-5 " />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/faisalrehman18/"
+              target="_blank"
+              title="LinkedIn"
+              className="bg-gray-200 p-2 rounded-full mr-4 hover:bg-gray-400"
+            >
+              <AiFillLinkedin className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.instagram.com/faisalfasi18/"
+              target="_blank"
+              title="Instagram"
+              className="bg-gray-200 p-2 rounded-full mr-4 hover:bg-gray-400"
+            >
+              <AiOutlineInstagram className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.facebook.com/faisalfasi18"
+              target="_blank"
+              title="Facebook"
+              className="bg-gray-200 p-2 rounded-full mr-4 hover:bg-gray-400"
+            >
+              <AiFillFacebook className="w-5 h-5" />
             </a>
           </div>
           {/* // add icons here */}

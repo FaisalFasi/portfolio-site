@@ -1,5 +1,6 @@
 import React from "react";
 import { FiExternalLink } from "react-icons/fi";
+import { AiFillGithub } from "react-icons/ai";
 
 const Card = (props) => {
   return (
@@ -25,7 +26,14 @@ const Card = (props) => {
             <h1 className="text-3xl  font-nuntinoFont font-bold  text-[#1a202c]">
               {props.title}
             </h1>
-            <FiExternalLink className="h-7 w-7 text-green-500" />
+            <span className="flex gap-4">
+              <a href={props.websiteLink} target="_blank">
+                <FiExternalLink className="h-7 w-7 text-green-500" />
+              </a>
+              <a href={props.gitHubLink} target="_blank">
+                <AiFillGithub className="h-7 w-7 text-green-500" />
+              </a>
+            </span>
           </div>
           <div className="flex gap-2 mt-2 font-bold ">
             <span className="px-2  bg-[#bde3f8] rounded text-sm   ">

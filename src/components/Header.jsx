@@ -38,7 +38,7 @@ const Header = () => {
   };
 
   return (
-    <div className="sticky top-0  z-50 flex items-center py-4 px-6 justify-between w-full   bg-[rgba(255,255,255,0.98)] ">
+    <div className="sticky top-0  z-50 flex items-center py-4 px-4 justify-between w-full   bg-[rgba(255,255,255,0.98)] ">
       {/* Heading  */}
       <div className=" ">
         <h1 className="text-lg sm:text-xl md:text-2xl font-extrabold font-nuntinoFont ">

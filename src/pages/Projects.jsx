@@ -1,14 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import { FiExternalLink } from "react-icons/fi";
-import { DiReact } from "react-icons/di";
-import { BiLogoTailwindCss } from "react-icons/bi";
 import { AiFillGithub } from "react-icons/ai";
-import { AiFillLinkedin } from "react-icons/ai";
-import { AiOutlineInstagram } from "react-icons/ai";
-import { AiFillFacebook } from "react-icons/ai";
-
 import Card from "../components/Card";
 import RepositoryCard from "../components/RepositoryCard";
 import Footer from "../components/Footer";
@@ -44,7 +36,7 @@ const projectDetails = [
     description:
       "A Progressive Web App (PWA) to showcase my resume, skills and to share my experiences.",
     projectImg: "/images/img-3.png",
-    paddingLeftRight: "lg:pr-[15%] lg:pl-24",
+    paddingLeftRight: "lg:pl-[15%] lg:pr-24",
     titlePos: "lg:left-0",
     websiteLink: "https://qwerty-friend.netlify.app",
     gitHubLink: "https://github.com/FaisalFasi/qwerty-friend",

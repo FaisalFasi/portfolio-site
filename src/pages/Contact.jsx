@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import SendMessageCard from "../components/SendMessageCard";
+import Footer from "../components/Footer";
 
 const Contact = () => {
   return (
@@ -13,12 +14,13 @@ const Contact = () => {
             Contact
           </h1>
           <p className="p-2 text-center text-[#1a202c] font-poppinFont">
-            A quick collection of my projects.
+            Feel free to contact me for any queries.
           </p>
         </div>
       </div>
       {/* form section  */}
       <SendMessageCard />
+      <Footer />
     </div>
   );
 };

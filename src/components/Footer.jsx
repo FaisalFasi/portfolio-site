@@ -8,10 +8,10 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { AiFillFacebook } from "react-icons/ai";
 const Footer = () => {
   return (
-    <div className="">
-      <div className="flex flex-col md:flex-row items-center md:justify-between  px-8   py-6 bg-[#f7fafc] ">
-        <p className="mt-6">© 2023 Faisal Rehman</p>
-        <div className="flex items-center mt-6">
+    <div>
+      <div className="flex flex-col md:flex-row items-center md:justify-between  px-20 py-6 md:py-4 bg-[#f7fafc] ">
+        <p className="">© 2023 Faisal Rehman</p>
+        <div className="flex items-center mt-6 md:mt-0">
           <span> {"Built with: "}</span>
           <pre> </pre>
           <a
@@ -30,7 +30,7 @@ const Footer = () => {
             <BiLogoTailwindCss className="text-white" />
           </a>
         </div>
-        <div className="flex mt-6">
+        <div className="flex mt-6 md:mt-0">
           <a
             href="https://github.com/FaisalFasi"
             target="_blank"

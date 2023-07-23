@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import AboutMe from "../components/AboutMe";
 import Footer from "../components/Footer";
@@ -13,7 +12,7 @@ const Home = () => {
       <div id="projects" className=" py-10 px-20 md:px-[15%] lg:px[20%]">
         <div className="flex flex-col lg:flex-row justify-center items-center">
           <img
-            src="/public/images/my-pic-6.png"
+            src="/images/my-pic-6.png"
             alt=""
             className="w-60 h-60 rounded-[20px] border border-blue-100"
           />

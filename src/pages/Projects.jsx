@@ -65,7 +65,7 @@ const Projects = () => {
       <div className="mx-8">
         {/* my project Heading  */}
         <div className="mt-12">
-          <h1 className="my-2 text-center text-6xl font-nuntinoFont font-extrabold text-[#1a202c]">
+          <h1 className="my-2 text-center text-5xl font-nuntinoFont font-extrabold text-[#1a202c]">
             My Projects
           </h1>
           <p className="p-2 text-center text-[#1a202c] font-poppinFont">

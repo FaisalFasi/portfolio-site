@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
+import { useTypewriter } from "react-simple-typewriter";
 
 const AboutMe = () => {
+  const [typescriptCompleted, setTypescriptCompleted] = useState(false);
+  const [count, setCount] = useState(0);
+
+  // const handleDone = () => {
+  //   console.log("TypeScript Completed");
+  // };
+
+  const handleCount = () => {
+    setCount((prev) => prev + 1);
+  };
+  useEffect(() => {
+    if (count >= 27) {
+      console.log("  Completed");
+      setTypescriptCompleted(true);
+    }
+  });
   return (
     <div>
       <div className=" relative flex justify-center items-center h-10 mt-4 bg-[#D9D9D9] rounded-t-[20px]">
@@ -20,58 +37,68 @@ const AboutMe = () => {
             typeSpeed={30}
             deleteSpeed={10}
             delaySpeed={1000}
+            // onLoopDone={handleDone}
+            onType={handleCount}
           />
         </p>
       </div>
-      <div className="bg-[#EBEBEB]  rounded-b-[20px] p-6 font-nuntinoFont">
-        <div>
-          <h1>
-            <b className="text-[#718096]"> {">"}</b> &nbsp; learnAboutMe()
-          </h1>
-          <p className="py-2  font-poppinFont text-[#718096]">
-            Loading data...
-          </p>
-          <h1>
-            <b className="text-[#718096]"> {">"}</b> &nbsp; currentLocation
-          </h1>
-          <p className=" py-2  font-nuntinoFont text-[#718096]">
-            "Berlin, Germany"
-          </p>
+      <div
+        className={`bg-[#EBEBEB]  rounded-b-[20px] p-6 font-nuntinoFont ${
+          typescriptCompleted ? "" : "h-[450px]"
+        }`}
+      >
+        {typescriptCompleted ? (
+          <div>
+            <h1>
+              <b className="text-[#718096]"> {">"}</b> &nbsp; learnAboutMe()
+            </h1>
+            <p className="py-2  font-poppinFont text-[#718096]">
+              Loading data...
+            </p>
+            <h1>
+              <b className="text-[#718096]"> {">"}</b> &nbsp; currentLocation
+            </h1>
+            <p className=" py-2  font-nuntinoFont text-[#718096]">
+              "Berlin, Germany"
+            </p>
 
-          <h1>
-            <b className="text-[#718096]"> {">"}</b> &nbsp; interests
-          </h1>
-          <p className="  py-2 font-nuntinoFont text-[#718096]">
-            ["Web Development", "Travelling", "Gaming", "Photography"]
-          </p>
+            <h1>
+              <b className="text-[#718096]"> {">"}</b> &nbsp; interests
+            </h1>
+            <p className="  py-2 font-nuntinoFont text-[#718096]">
+              ["Web Development", "Travelling", "Gaming", "Photography"]
+            </p>
 
-          <h1>
-            <b className="text-[#718096]"> {">"}</b> &nbsp; education
-          </h1>
-          <p className="  py-2 font-nuntinoFont text-[#718096]">
-            "Bachelor of Science in Computer Science - Hajvery University
-            Lahore"
-          </p>
+            <h1>
+              <b className="text-[#718096]"> {">"}</b> &nbsp; education
+            </h1>
+            <p className="  py-2 font-nuntinoFont text-[#718096]">
+              "Bachelor of Science in Computer Science - Hajvery University
+              Lahore"
+            </p>
 
-          <h1>
-            <b className="text-[#718096]"> {">"}</b> &nbsp; skills
-          </h1>
-          <p className="  py-2 font-nuntinoFont text-[#718096]">
-            ["Laravel", "Node", "Express", "React", "Vue", "Wordpress"]
-          </p>
+            <h1>
+              <b className="text-[#718096]"> {">"}</b> &nbsp; skills
+            </h1>
+            <p className="  py-2 font-nuntinoFont text-[#718096]">
+              ["Laravel", "Node", "Express", "React", "Vue", "Wordpress"]
+            </p>
 
-          <h1>
-            <b className="text-[#718096]"> {">"}</b> &nbsp; contactMe
-          </h1>
-          <p className="  py-2 font-nuntinoFont text-[#718096]">
-            [
-            <span className="text-[#2aae66]">
-              &nbsp; "Github", &nbsp; "FaceBook", &nbsp; "LinkedIn", &nbsp;
-              "Instagram" &nbsp;
-            </span>
-            ]
-          </p>
-        </div>
+            <h1>
+              <b className="text-[#718096]"> {">"}</b> &nbsp; contactMe
+            </h1>
+            <p className="  py-2 font-nuntinoFont text-[#718096]">
+              [
+              <span className="text-[#2aae66]">
+                &nbsp; "Github", &nbsp; "FaceBook", &nbsp; "LinkedIn", &nbsp;
+                "Instagram" &nbsp;
+              </span>
+              ]
+            </p>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

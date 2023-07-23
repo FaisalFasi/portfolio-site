@@ -9,7 +9,7 @@ import { AiFillFacebook } from "react-icons/ai";
 const Footer = () => {
   return (
     <div>
-      <div className="flex flex-col md:flex-row items-center md:justify-between  px-20 py-6 md:py-4 bg-[#f7fafc] ">
+      <div className=" flex flex-col md:flex-row items-center md:justify-between  px-20 py-6 md:py-4 bg-[#f7fafc] ">
         <p className="">© 2023 Faisal Rehman</p>
         <div className="flex items-center mt-6 md:mt-0">
           <span> {"Built with: "}</span>

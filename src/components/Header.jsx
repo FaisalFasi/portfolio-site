@@ -44,7 +44,6 @@ const Header = () => {
     if (window.innerWidth > 768) {
       setIsNavbarOpen(false);
     }
-    // setIsNavbarOpen(window.innerWidth < 768); // 768px is the breakpoint for medium size, adjust as needed
   };
 
   useEffect(() => {
@@ -56,10 +55,14 @@ const Header = () => {
       window.removeEventListener("resize", checkWindowSize);
     };
   }, []);
+  const handleClickSound = () => {
+    const audio = new Audio("/sounds/clickSound.wav");
+    audio.play();
+  };
 
   return (
     <div
-      className={`sticky top-0  z-50 flex items-center py-4 px-4 justify-between w-full bg-[rgba(255,255,255,0.98)]  ${
+      className={`sticky top-0 z-50 flex items-center py-4 px-4 justify-between w-full bg-[rgba(255,255,255,0.98)]  ${
         isDarkMode
           ? " bg-dark-bgFooter text-dark-text"
           : " bg-[#f7fafc] text-light-text"
@@ -71,16 +74,45 @@ const Header = () => {
           Faisal Rehman
         </h1>
       </div>
+      <div className="absolute top-2.5 right-16 ">
+        <button
+          onClick={() => {
+            handleClickSound();
+            toggleDarkMode();
+          }}
+          className={` cursor-pointer md:hidden ${
+            isDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-100"
+          } p-2 active:outline outline-2 outline-blue-400 rounded text-red-300 font-poppinFont `}
+        >
+          {isDarkMode ? (
+            <img
+              src="/logos/light-mode.svg"
+              alt="change to light mode"
+              title="switch to light mode"
+              className="w-6 h-6"
+            />
+          ) : (
+            <img
+              src="/logos/dark-mode.svg"
+              alt="change to dark mode"
+              title="switch to dark mode"
+              className="w-6 h-6"
+            />
+          )}
+        </button>
+      </div>
       {/* hamburger button  */}
       <div
-        className="w-7 h-7 z-20 absolute  top-4 right-6 cursor-pointer md:hidden"
+        className={`w-10 h-10 z-20 absolute  top-2.5 right-4 p-2 cursor-pointer md:hidden  rounded active:outline outline-2 outline-blue-400  ${
+          isDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-100"
+        }`}
         onClick={() => setIsNavbarOpen(!isNavbarOpen)}
       >
         {!isNavbarOpen ? <Bars3BottomRightIcon /> : <XMarkIcon />}
       </div>
       {/* ul list  */}
       <ul
-        className={` z-10 md:flex gap-2 md:gap-4 text-center md:items-center p-8 md:p-0 absolute md:static  bg-[rgba(255,255,255,0.92)]  md:bg-none  md:z-auto left-0 w-full   md:w-auto   transition-all duration-500 ease-out font-nuntinoFont font-extrabold text-lg   ${
+        className={` z-10 md:flex gap-2 md:gap-6 text-center md:items-center p-8 md:p-0 absolute md:static  bg-[rgba(255,255,255,0.92)] md:bg-none md:z-auto left-0 w-full md:w-auto transition-all duration-500 ease-out font-nuntinoFont font-extrabold text-lg   ${
           isNavbarOpen ? "h-screen top-0 pt-12 md:mt-8" : "top-[-490px]"
         }   ${
           isDarkMode
@@ -90,22 +122,41 @@ const Header = () => {
       >
         {navbarLinks.map((link, index) => {
           return (
-            <li key={index} className=" pt-8 md:pt-0">
+            <li key={index} className="pt-8 md:pt-0 ">
               <Link
                 to={link._link}
                 onClick={() => handleNavLinkClick(link._scrollTo)}
+                className={`relative before:w-0 before:absolute before:bottom-0 before:border-b-2 ${
+                  isDarkMode ? "before:border-white" : "before:border-black"
+                } hover:before:w-full before:transition-all before:duration-300`}
               >
                 {link._name}
               </Link>
             </li>
           );
         })}
-        <li className="pt-8 md:py-0 ">
+        <li className="pt-8 md:py-0 hidden md:block">
           <button
-            onClick={toggleDarkMode}
-            className=" px-4 py-1 rounded bg-blue-500 text-white font-poppinFont"
+            onClick={() => {
+              handleClickSound();
+              toggleDarkMode();
+            }}
+            className=" p-2  rounded  font-poppinFont hover:outline outline-2 text-red-300 outline-blue-400"
           >
-            {isDarkMode ? "Dark" : "Light"}
+            {isDarkMode ? (
+              <img
+                src="/light-mode.svg"
+                alt="change to light mode"
+                title="switch to light mode"
+              />
+            ) : (
+              <img
+                src="/logos/dark-mode.svg"
+                alt="change to dark mode"
+                title="switch to dark mode"
+                className="w-6 h-6"
+              />
+            )}
           </button>
         </li>
       </ul>

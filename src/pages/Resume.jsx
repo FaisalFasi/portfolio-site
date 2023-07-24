@@ -1,18 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { FiDownload } from "react-icons/fi";
+import { ThemeContext } from "../context/ThemeContext";
+
 const Resume = () => {
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
-    <div className=" h-full">
+    <div
+      className={` h-full ${
+        isDarkMode
+          ? "bg-dark-background  text-dark-text"
+          : "bg-light-background  text-[#1a202c]"
+      }`}
+    >
       <Header />
       <div className="mx-8">
         {/* my project Heading  */}
         <div className="mt-12">
-          <h1 className=" my-2 text-center text-5xl font-nuntinoFont font-extrabold text-[#1a202c] ">
+          <h1 className=" my-2 text-center text-5xl font-nuntinoFont font-extrabold ">
             Resume
           </h1>
-          <p className="p-2 text-center text-[#1a202c] font-poppinFont">
+          <p className="p-2 text-center  font-poppinFont">
             My Education, Experience and Skills.
           </p>
         </div>
@@ -20,7 +30,7 @@ const Resume = () => {
         <div className="flex flex-col gap-4 md:gap-20 md:flex-row md:justify-center my-12">
           <div className="  ">
             <div>
-              <h1 className=" my-2 text-center md:text-left text-3xl font-nuntinoFont font-extrabold text-[#1a202c] ">
+              <h1 className=" my-2 text-center md:text-left text-3xl font-nuntinoFont font-extrabold  ">
                 Experience
               </h1>
             </div>

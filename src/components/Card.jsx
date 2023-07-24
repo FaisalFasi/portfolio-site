@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
+import { ThemeContext } from "../context/ThemeContext.jsx";
 
 const Card = (props) => {
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
     <div id="project-1" className="relative w-full mt-16">
       {/* project 1 starts here 1st part */}
@@ -20,10 +23,16 @@ const Card = (props) => {
         </div>
         {/* 2nd part  */}
         <div
-          className={`lg:w-[40%] lg:absolute lg:top-1/2 ${props.titlePos} lg:transform lg:-translate-y-1/2 mb-4 px-4 py-6 shadow-lg drop-shadow-lg rounded-b-[20px] lg:rounded-[20px] lg:border lg:border-solid lg:border-size   bg-white `}
+          className={`lg:w-[40%] lg:absolute lg:top-1/2 ${
+            props.titlePos
+          } lg:transform lg:-translate-y-1/2 mb-4 px-4 py-6 shadow-lg drop-shadow-lg rounded-b-[20px] lg:rounded-[20px] lg:border lg:border-solid lg:border-size  ${
+            isDarkMode
+              ? "bg-dark-background  text-dark-text"
+              : "bg-light-background   text-[#1a202c]"
+          }`}
         >
           <div className="flex justify-between items-center  ">
-            <h1 className="text-3xl  font-nuntinoFont font-bold  text-[#1a202c]">
+            <h1 className="text-3xl  font-nuntinoFont font-bold ">
               {props.title}
             </h1>
             <span className="flex gap-4">
@@ -35,8 +44,8 @@ const Card = (props) => {
               </a>
             </span>
           </div>
-          <div className="flex gap-2 mt-2 font-bold ">
-            <span className="px-2  bg-[#bde3f8] rounded text-sm   ">
+          <div className="flex gap-2 mt-2 font-bold  text-blue-800  ">
+            <span className="px-2  bg-[#bde3f8] rounded text-sm ">
               {props.madeWith[0]}
             </span>
             <span className="px-2 bg-[#37BCF8] rounded text-sm ">
@@ -50,7 +59,7 @@ const Card = (props) => {
               ""
             )}
           </div>
-          <div className="pt-4 font-poppinFont  text-[#1a202c] ">
+          <div className="pt-4 font-poppinFont    ">
             <p>{props.description}</p>
           </div>
         </div>

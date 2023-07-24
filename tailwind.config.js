@@ -2,7 +2,22 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        light: {
+          background: "#ffffff",
+          text: "#333333",
+        },
+        dark: {
+          background: "#1a202c",
+          bgHeaderAboutMe: "#0F141A",
+          bgBodyAboutMe: "#161B24",
+          bgBody: "#161B24",
+          bgFooter: "#0F141A",
+          text: "#ffffff",
+        },
+      },
+    },
     fontFamily: {
       nuntinoFont: ["Nunito Sans", "sans-sarif"],
       poppinFont: ["Poppins", "sans-sarif"],

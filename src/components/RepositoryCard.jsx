@@ -13,7 +13,7 @@ const RepositoryCard = (props) => {
           {props.repo.language}
         </span>
       </div>
-      <p className="mt-2 text-[#4a5567]">{props.repo.description}</p>
+      <p className="mt-2 text-[#93A0B0]">{props.repo.description}</p>
     </a>
   );
 };

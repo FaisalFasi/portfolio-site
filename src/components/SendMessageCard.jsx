@@ -78,33 +78,33 @@ const SendMessageCard = () => {
                 href="https://github.com/FaisalFasi"
                 target="_blank"
                 title="GitHub"
-                className="bg-white p-2 rounded-full hover:bg-[#2AAE66]"
+                className=" text-white p-2 rounded-full hover:bg-[#2AAE66]"
               >
-                <AiFillGithub className="w-5 h-5 " />
+                <AiFillGithub className="w-7 h-7" />
               </a>
               <a
                 href="https://www.linkedin.com/in/faisalrehman18/"
                 target="_blank"
                 title="LinkedIn"
-                className="bg-white p-2 rounded-full    hover:bg-[#2AAE66]"
+                className=" text-white p-2 rounded-full hover:bg-[#2AAE66]"
               >
-                <AiFillLinkedin className="w-5 h-5" />
+                <AiFillLinkedin className="w-7 h-7" />
               </a>
               <a
                 href="https://www.instagram.com/faisalfasi18/"
                 target="_blank"
                 title="Instagram"
-                className="bg-white p-2 rounded-full   hover:bg-[#2AAE66]"
+                className=" text-white p-2 rounded-full hover:bg-[#2AAE66]"
               >
-                <AiOutlineInstagram className="w-5 h-5" />
+                <AiOutlineInstagram className="w-7 h-7" />
               </a>
               <a
                 href="https://www.facebook.com/faisalfasi18"
                 target="_blank"
                 title="Facebook"
-                className="bg-white p-2 rounded-full   hover:bg-[#2AAE66]"
+                className=" text-white p-2 rounded-full hover:bg-[#2AAE66]"
               >
-                <AiFillFacebook className="w-5 h-5" />
+                <AiFillFacebook className="w-7 h-7" />
               </a>
             </div>
           </div>
@@ -121,7 +121,7 @@ const SendMessageCard = () => {
             </h1>
             <div className="relative mb-2">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
-                <BiSolidUser />
+                <BiSolidUser className="text-black" />
               </div>
               <input
                 type="text"
@@ -136,7 +136,7 @@ const SendMessageCard = () => {
             </h1>
             <div className="relative mb-2">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
-                <AiTwotoneMail />
+                <AiTwotoneMail className="text-black" />
               </div>
               <input
                 type="email"

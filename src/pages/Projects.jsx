@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Header from "../components/Header";
 import { AiFillGithub } from "react-icons/ai";
 import Card from "../components/Card";
 import RepositoryCard from "../components/RepositoryCard";
 import Footer from "../components/Footer";
+import { ThemeContext } from "../context/ThemeContext.jsx";
+
 {
   /* <Link to={"/"}>Projects</Link> */
 }
@@ -59,16 +61,30 @@ const repositoriesInfo = [
 ];
 
 const Projects = () => {
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
-    <div className=" h-full">
+    <div
+      className={` h-full   ${
+        isDarkMode
+          ? " bg-dark-bgBody text-dark-text"
+          : " bg-light-background text-light-text"
+      }`}
+    >
       <Header />
       <div className="mx-8">
         {/* my project Heading  */}
-        <div className="mt-12">
-          <h1 className="my-2 text-center text-5xl font-nuntinoFont font-extrabold text-[#1a202c]">
+        <div
+          className={`mt-12${
+            isDarkMode
+              ? " bg-dark-bgBody text-dark-text"
+              : " bg-light-background text-light-text"
+          }`}
+        >
+          <h1 className="my-2 text-center text-5xl font-nuntinoFont font-extrabold  ">
             My Projects
           </h1>
-          <p className="p-2 text-center text-[#1a202c] font-poppinFont">
+          <p className="p-2 text-center   font-poppinFont">
             A quick collection of my projects.
           </p>
         </div>
@@ -91,11 +107,17 @@ const Projects = () => {
       </div>
       {/* repository section  */}
       <div>
-        <div className="flex  flex-col items-center mt-20">
-          <h1 className="my-2 text-center text-5xl font-nuntinoFont font-extrabold text-[#1a202c]">
+        <div
+          className={`flex  flex-col items-center mt-20 ${
+            isDarkMode
+              ? " bg-dark-bgBody text-dark-text"
+              : " bg-light-background text-[#1a202c]"
+          }`}
+        >
+          <h1 className="my-2 text-center text-5xl font-nuntinoFont font-extrabold ">
             Repositories
           </h1>
-          <p className="p-2 text-center text-[#1a202c] font-poppinFont">
+          <p className="p-2 text-center   font-poppinFont">
             A list of all of the public repositories on my GitHub.
           </p>
 

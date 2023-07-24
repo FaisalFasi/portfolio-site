@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { FiDownload } from "react-icons/fi";
@@ -129,37 +128,37 @@ const Resume = () => {
           <div className=" ">
             <div className="flex flex-wrap justify-center gap-20 mx-[15%] md:mx-[20%]">
               <img
-                src="/public/logos/html-5.svg"
+                src="/logos/html-5.svg"
                 alt="HTML"
                 className="w-16 h-16"
                 title="HTML"
               />
               <img
-                src="/public/logos/css-3.svg"
+                src="/logos/css-3.svg"
                 alt="CSS3"
                 className="w-16 h-16"
                 title="CSS3"
               />
               <img
-                src="/public/logos/js.svg"
+                src="/logos/js.svg"
                 alt="JS"
                 className="w-16 h-16"
                 title="JS"
               />
               <img
-                src="/public/logos/react.svg"
+                src="/logos/react.svg"
                 alt="REACT"
                 className="w-16 h-16"
                 title="REACT"
               />
               <img
-                src="/public/logos/node.svg"
+                src="/logos/node.svg"
                 alt="NODE"
                 className="w-16 h-16"
                 title="NODE"
               />
               <img
-                src="/public/logos/pug.svg"
+                src="/logos/pug.svg"
                 alt="PUG"
                 className="w-16 h-16"
                 title="PUG"
@@ -168,7 +167,7 @@ const Resume = () => {
           </div>
           <div className="pt-10 mb-20 flex justify-center">
             <a
-              href="/public/cv/CV - Faisal Rehman.pdf"
+              href="/cv/CV - Faisal Rehman.pdf"
               className="flex items-center gap-2 font-bold text-white px-6 py-3 rounded-[10px] bg-[#2bae66] hover:opacity-80  cursor-pointer"
               download="Faisal Rehman CV"
             >

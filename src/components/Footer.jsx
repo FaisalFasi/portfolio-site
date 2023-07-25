@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <div>
       <div
-        className={`flex flex-col md:flex-row items-center md:justify-between  px-20 py-6 md:py-4 bg-[#f7fafc] ${
+        className={`flex flex-col md:flex-row items-center md:justify-between px-10 md:px-20 py-6 md:py-4 bg-[#f7fafc] ${
           isDarkMode
             ? " bg-dark-bgFooter text-dark-text"
             : " bg-[#f7fafc] text-light-text"

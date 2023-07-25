@@ -145,9 +145,10 @@ const Header = () => {
           >
             {isDarkMode ? (
               <img
-                src="/light-mode.svg"
+                src="/logos/light-mode.svg"
                 alt="change to light mode"
                 title="switch to light mode"
+                className="w-6 h-6"
               />
             ) : (
               <img

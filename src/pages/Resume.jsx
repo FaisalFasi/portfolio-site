@@ -136,7 +136,7 @@ const Resume = () => {
             </h1>
           </div>
           <div className=" ">
-            <div className="flex flex-wrap justify-center gap-20 mx-[15%] md:mx-[20%]">
+            <div className="flex flex-wrap justify-center gap-20 mx-[5%] md:mx-[15%] lg:mx-[20%]">
               <img
                 src="/logos/html-5.svg"
                 alt="HTML"

@@ -4,9 +4,9 @@ import { ThemeContext } from "../context/ThemeContext";
 
 const AboutMe = () => {
   const { isDarkMode } = useContext(ThemeContext);
-
   const [typescriptCompleted, setTypescriptCompleted] = useState(false);
   const [count, setCount] = useState(0);
+  const [mobileScreen, setMobileScreen] = useState(false);
 
   const handleCount = () => {
     setCount((prev) => prev + 1);
@@ -18,22 +18,45 @@ const AboutMe = () => {
     }
   });
 
+  // check when window size is greater then medium
+  const checkWindowSize = () => {
+    if (window.innerWidth < 640) {
+      setMobileScreen(true);
+    } else {
+      setMobileScreen(false);
+    }
+  };
+
+  useEffect(() => {
+    // Add event listener for "resize" event on the window object
+    window.addEventListener("resize", checkWindowSize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", checkWindowSize);
+    };
+  }, []);
+
   return (
     <div>
       <div
-        className={`relative flex justify-center items-center h-10 mt-4 bg-[#D9D9D9] rounded-t-[20px] ${
+        className={`relative flex justify-center  items-center h-10 mt-4 bg-[#D9D9D9] rounded-t-[20px] ${
           isDarkMode
             ? " bg-dark-bgHeaderAboutMe text-dark-text"
             : "  text-light-text"
-        }`}
+        }  `}
       >
-        <div className="w-full absolute flex justify-start items-center z-1 px-6  gap-2">
-          <div className="w-3 h-3 bg-red-500 rounded-full "></div>
-          <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-          <div className="w-3 h-3 bg-green-600 rounded-full"></div>
-        </div>
+        {!mobileScreen ? (
+          <div className="w-full absolute flex justify-start items-center z-1 px-6  gap-2">
+            <div className="w-3 h-3 bg-red-500 rounded-full "></div>
+            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-green-600 rounded-full"></div>
+          </div>
+        ) : (
+          ""
+        )}
 
-        <p className="pl-4 sm:pl-0">
+        <p className="pl-4 sm:pl-0 z-10 font-bold ">
           <Typewriter
             words={[" Executed: introduceSelf.js"]}
             loop={1}

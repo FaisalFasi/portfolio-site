@@ -38,8 +38,8 @@ const SendMessageCard = () => {
   };
 
   return (
-    <div className=" mx-10 md:mx-[10%] lg:mx-[20%] my-10">
-      <div className="flex justify-between flex-col md:flex-row  bg-black p-14 rounded-[10px]">
+    <div className=" mx-4 md:mx-[10%] lg:mx-[20%] my-10">
+      <div className="flex justify-between flex-col md:flex-row  bg-black p-4 md:p-14 rounded-[10px]">
         <div>
           <div className=" text-white  font-nuntinoFont">
             <h1 className="text-3xl font-extrabold">Form Details</h1>
@@ -49,7 +49,7 @@ const SendMessageCard = () => {
           <div className="flex flex-col py-8 font-bold font-nuntinoFont  text-white">
             <a
               href="tel:+491781633786"
-              className="w-[200px] flex gap-4  px-4 py-2 hover:text-[#2AAE66] active:bg-white focus:outline  focus:outline-blue-400 rounded"
+              className="w-[200px] flex gap-4  px-0 md:px-4 py-2 hover:text-[#2AAE66] active:bg-white focus:outline  focus:outline-blue-400 rounded"
             >
               <BsTelephoneFill className=" w-5 h-5 " />
 
@@ -58,7 +58,7 @@ const SendMessageCard = () => {
             <a
               href="mailto:faisalfasi18@gmail.com"
               target="_blank"
-              className="w-[250px]  flex items-center gap-4 px-4 py-2 mt-6 active:bg-white focus:outline focus:outline-blue-400  hover:text-[#2AAE66] rounded"
+              className="w-[250px]  flex items-center gap-4 px-0 md:px-4 py-2 mt-6 active:bg-white focus:outline focus:outline-blue-400  hover:text-[#2AAE66] rounded"
             >
               <MdEmail className="w-5 h-5 " />
               <span>faisalfasi18@gmail.com</span>
@@ -66,14 +66,14 @@ const SendMessageCard = () => {
             <a
               href="https://goo.gl/maps/b7bSKRs1MXrFnzpQA"
               target="_blank"
-              className="w-[200px] flex items-center  gap-4 px-4 py-2 mt-6 active:bg-white focus:outline focus:outline-blue-400  hover:text-[#2AAE66] rounded"
+              className="w-[200px] flex items-center  gap-4 px-0 md:px-4 py-2 mt-6 active:bg-white focus:outline focus:outline-blue-400  hover:text-[#2AAE66] rounded"
             >
               <MdLocationPin className="w-7 h-7 " />
               <span>Berlin,Germany</span>
             </a>
           </div>
           <div>
-            <div className="flex gap-6 mx-6 my-2">
+            <div className="flex gap-4 px-0 md:px-4 my-2">
               <a
                 href="https://github.com/FaisalFasi"
                 target="_blank"
@@ -114,7 +114,7 @@ const SendMessageCard = () => {
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="mt-12  md:mt-0 bg-white w-[300px] p-8 rounded-[10px]"
+            className="mt-12 md:mt-0 bg-white w-[250px] md:w-[300px] p-4 md:p-8 rounded-[10px]"
           >
             <h1 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
               Your Name
@@ -126,7 +126,7 @@ const SendMessageCard = () => {
               <input
                 type="text"
                 name="user_name"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className=" w-full pl-10 p-2.5 text-sm rounded-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Faisal Rehman"
                 required
               />

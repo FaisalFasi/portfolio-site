@@ -5,60 +5,8 @@ import Card from "../components/Card";
 import RepositoryCard from "../components/RepositoryCard";
 import Footer from "../components/Footer";
 import { ThemeContext } from "../context/ThemeContext.jsx";
-
-{
-  /* <Link to={"/"}>Projects</Link> */
-}
-const projectDetails = [
-  {
-    title: "Portfolio Site",
-    madeWith: ["HTML5", "BootStrap v5"],
-    description:
-      "A Progressive Web App (PWA) to showcase my resume, skills and to share my experiences.",
-    projectImg: "/images/img-1.png",
-    paddingLeftRight: "lg:pl-[15%] lg:pr-24",
-    titlePos: "lg:left-0",
-    websiteLink: "https://faisalrehman.netlify.app",
-    gitHubLink: "https://github.com/FaisalFasi/Faisal-Rehman-Portfolio",
-  },
-  {
-    title: "Netflix Clone",
-    madeWith: ["React", "TMDB Api", "FireBase"],
-    description:
-      "A Progressive Web App (PWA) to showcase my resume, skills and to share my experiences.",
-    projectImg: "/images/img-2.png",
-    paddingLeftRight: "lg:pr-[15%] lg:pl-24",
-    titlePos: "lg:right-0",
-    websiteLink: "https://netflix-clone-version-0.netlify.app",
-    gitHubLink: "https://github.com/FaisalFasi/react-netflix-clone-project",
-  },
-  {
-    title: "Qwerty Friend",
-    madeWith: ["React", "Tailwind"],
-    description:
-      "A Progressive Web App (PWA) to showcase my resume, skills and to share my experiences.",
-    projectImg: "/images/img-3.png",
-    paddingLeftRight: "lg:pl-[15%] lg:pr-24",
-    titlePos: "lg:left-0",
-    websiteLink: "https://qwerty-friend.netlify.app",
-    gitHubLink: "https://github.com/FaisalFasi/qwerty-friend",
-  },
-];
-
-const repositoriesInfo = [
-  {
-    title: "Portfolio",
-    language: "ReactJS",
-    description: "Personal website build with ReactJS and Tailwind CSS.",
-    projectLink: "https://github.com/FaisalFasi/Faisal-Rehman-Portfolio",
-  },
-  {
-    title: "Piano App",
-    language: "ReactJS",
-    description: "Piano app build with ReactJS and Tailwind CSS.",
-    projectLink: "https://github.com/FaisalFasi/react-piano-project",
-  },
-];
+import projectDetails from "./projectDetails.json";
+import repositoriesInfo from "./repositoriesInfo.json";
 
 const Projects = () => {
   const { isDarkMode } = useContext(ThemeContext);
@@ -131,7 +79,8 @@ const Projects = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row gap-0 md:gap-12 mx-6 md:mx-8 lg:mx-20 mt-8 mb-20">
+      {/* <div className="flex flex-col md:flex-row gap-0 md:gap-12 mx-6 md:mx-8 lg:mx-20 mt-8 mb-20"> */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mx-6 md:mx-8  mt-8 mb-20">
         {repositoriesInfo.map((repo, idx) => {
           return <RepositoryCard key={idx} repo={repo} />;
         })}

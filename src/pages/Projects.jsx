@@ -5,7 +5,7 @@ import Card from "../components/Card";
 import RepositoryCard from "../components/RepositoryCard";
 import Footer from "../components/Footer";
 import { ThemeContext } from "../context/ThemeContext.jsx";
-import projectDetails from "./projectDetails.json";
+import projectDetails from "./projectDetails.js";
 import repositoriesInfo from "./repositoriesInfo.json";
 
 const Projects = () => {
@@ -80,7 +80,7 @@ const Projects = () => {
         </div>
       </div>
       {/* <div className="flex flex-col md:flex-row gap-0 md:gap-12 mx-6 md:mx-8 lg:mx-20 mt-8 mb-20"> */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mx-6 md:mx-8  mt-8 mb-20">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 mx-6 md:mx-8  mt-8 mb-20">
         {repositoriesInfo.map((repo, idx) => {
           return <RepositoryCard key={idx} repo={repo} />;
         })}

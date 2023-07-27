@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Fullstack Messaging App",
+    "language": "ReactJS , NodeJS",
+    "description": "A basic working example for real-time messaging app",
+    "projectLink": "https://github.com/FaisalFasi/fullstack-messenger-frontend"
+  },
+  {
+    "title": "Piano App",
+    "language": "ReactJS",
+    "description": "Piano app build with ReactJS and Tailwind CSS.",
+    "projectLink": "https://github.com/FaisalFasi/react-piano-project"
+  },
+  {
+    "title": "Flipflop Game",
+    "language": "ReactJS",
+    "description": "A basic game play for kids",
+    "projectLink": "https://github.com/FaisalFasi/react-flipflop-game"
+  },
+  {
+    "title": "Qwerty-Friend App",
+    "language": "ReactJS",
+    "description": "You can show someone keys code by image and url",
+    "projectLink": "https://github.com/FaisalFasi/qwerty-friend"
+  },
+  {
+    "title": "Order Food App",
+    "language": "ReactJS",
+    "description": "A basic working app for order differnet items with bill receipt.",
+    "projectLink": "https://github.com/FaisalFasi/food-app-project"
+  },
+  {
+    "title": "Portfolio Landing Page",
+    "language": "HTML5",
+    "description": "A landing page build with HTML5 and SASS.",
+    "projectLink": "https://github.com/FaisalFasi/Faisal-Rehman-Portfolio"
+  }
+]

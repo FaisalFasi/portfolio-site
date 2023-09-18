@@ -1,5 +1,16 @@
 const projectDetails = [
   {
+    title: "Netflix Clone",
+    madeWith: ["React", "TMDB Api", "FireBase"],
+    description:
+      "Discover your favorite movies and shows on my Netflix clone,providing a responsive and visually appealing platform for endless entertainment at your fingertips",
+    projectImg: "/images/netflix-img.png",
+    paddingLeftRight: "lg:pr-[15%] lg:pl-24",
+    titlePos: "lg:right-0",
+    websiteLink: "https://fr-netflix-clone.netlify.app",
+    gitHubLink: "https://github.com/FaisalFasi/react-netflix-clone-project",
+  },
+  {
     title: "Portfolio Site",
     madeWith: ["HTML5", "BootStrap v5"],
     description:
@@ -9,17 +20,6 @@ const projectDetails = [
     titlePos: "lg:left-0",
     websiteLink: "https://faisalrehman-portfolio.netlify.app",
     gitHubLink: "https://github.com/FaisalFasi/portfolio-site",
-  },
-  {
-    title: "Netflix Clone",
-    madeWith: ["React", "TMDB Api", "FireBase"],
-    description:
-      "Discover your favorite movies and shows on my Netflix clone,providing a responsive and visually appealing platform for endless entertainment at your fingertips",
-    projectImg: "/images/netflix-img.png",
-    paddingLeftRight: "lg:pr-[15%] lg:pl-24",
-    titlePos: "lg:right-0",
-    websiteLink: "https://netflix-clone-version-0.netlify.app",
-    gitHubLink: "https://github.com/FaisalFasi/react-netflix-clone-project",
   },
   {
     title: "TODO APP",

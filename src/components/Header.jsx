@@ -56,7 +56,7 @@ const Header = () => {
     };
   }, []);
   const handleClickSound = () => {
-    const audio = new Audio("/sounds/clickSound.wav");
+    const audio = new Audio("/sounds/clickSound.mp3");
     audio.play();
   };
 

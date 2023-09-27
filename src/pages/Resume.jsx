@@ -28,50 +28,6 @@ const Resume = () => {
         </div>
         {/* experience section  */}
         <div className="flex flex-col gap-4 md:gap-20 md:flex-row md:justify-center my-12">
-          <div className="  ">
-            <div>
-              <h1 className=" my-2 text-center md:text-left text-3xl font-nuntinoFont font-extrabold  ">
-                Experience
-              </h1>
-            </div>
-            <div>
-              <ul className="border-l-4 top-[50%] border-l-indigo-100">
-                <li
-                  className="relative left-0  top-[50%] pl-4 pb-4"
-                  style={{ borderLeftWidth: "50%" }}
-                >
-                  <h1 className="  font-bold my-2">
-                    Epapa (Oct 2021 - Feb 2022)
-                  </h1>
-                  <i>Berlin, Berlin, Germany</i>
-                  <p className="">Frontend Developer - React (Internship)</p>
-                  <span className=" absolute top-1 left-[-10px] w-4 h-4  bg-green-700 rounded-full"></span>
-                </li>
-                <li
-                  className="relative left-0  top-[50%] pl-4 pb-4"
-                  style={{ borderLeftWidth: "50%" }}
-                >
-                  <h1 className="font-bold my-2">
-                    Upwork (Feb 2020 - Sep 2021)
-                  </h1>
-                  <i>Berlin, Berlin, Germany</i>
-                  <p className="">Freelance Game Developer</p>
-                  <span className=" absolute top-1 left-[-10px] w-4 h-4  bg-green-700 rounded-full"></span>
-                </li>
-                <li
-                  className="relative left-0  top-[50%] pl-4 pb-4"
-                  style={{ borderLeftWidth: "50%" }}
-                >
-                  <h1 className="font-bold my-2">
-                    BlueHorn Technology (Sep 2017 - Aug 2019)
-                  </h1>
-                  <i>Lahore, Punjab, Pakistan</i>
-                  <p className="">Unity Game Developer</p>
-                  <span className=" absolute top-1 left-[-10px] w-4 h-4  bg-green-700 rounded-full"></span>
-                </li>
-              </ul>
-            </div>
-          </div>
           <div className=" ">
             <div>
               <h1 className=" my-2 text-center md:text-left text-3xl font-nuntinoFont font-extrabold text-[#1a202c] ">
@@ -122,6 +78,50 @@ const Resume = () => {
                   </h1>
                   <i>Lahore, Punjab, Pakistan</i>
                   <p className="">Matriculation (Science)</p>
+                  <span className=" absolute top-1 left-[-10px] w-4 h-4  bg-green-700 rounded-full"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="  ">
+            <div>
+              <h1 className=" my-2 text-center md:text-left text-3xl font-nuntinoFont font-extrabold  ">
+                Experience
+              </h1>
+            </div>
+            <div>
+              <ul className="border-l-4 top-[50%] border-l-indigo-100">
+                <li
+                  className="relative left-0  top-[50%] pl-4 pb-4"
+                  style={{ borderLeftWidth: "50%" }}
+                >
+                  <h1 className="  font-bold my-2">
+                    Self-Directed Learning (Jan 2022 - Oct 2022)
+                  </h1>
+                  <i>Berlin, Berlin, Germany</i>
+                  <p className="">Frontend Web Development with React JS </p>
+                  <span className=" absolute top-1 left-[-10px] w-4 h-4  bg-green-700 rounded-full"></span>
+                </li>
+                <li
+                  className="relative left-0  top-[50%] pl-4 pb-4"
+                  style={{ borderLeftWidth: "50%" }}
+                >
+                  <h1 className="font-bold my-2">
+                    Upwork (Feb 2020 - Sep 2021)
+                  </h1>
+                  <i>Berlin, Berlin, Germany</i>
+                  <p className="">Freelance Game Developer</p>
+                  <span className=" absolute top-1 left-[-10px] w-4 h-4  bg-green-700 rounded-full"></span>
+                </li>
+                <li
+                  className="relative left-0  top-[50%] pl-4 pb-4"
+                  style={{ borderLeftWidth: "50%" }}
+                >
+                  <h1 className="font-bold my-2">
+                    BlueHorn Technology (Sep 2017 - Aug 2019)
+                  </h1>
+                  <i>Lahore, Punjab, Pakistan</i>
+                  <p className="">Unity Game Developer</p>
                   <span className=" absolute top-1 left-[-10px] w-4 h-4  bg-green-700 rounded-full"></span>
                 </li>
               </ul>

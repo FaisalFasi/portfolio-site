@@ -3,6 +3,7 @@ import { FiExternalLink } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
 import { ThemeContext } from "../context/ThemeContext.jsx";
 
+const bgColors = ["#bde3f8", "#37BCF8", "#f69f4e", "#07ff66", "#94ff8d"];
 const Card = (props) => {
   const { isDarkMode } = useContext(ThemeContext);
 
@@ -45,21 +46,24 @@ const Card = (props) => {
             </span>
           </div>
           <div className="flex gap-2 mt-2 font-bold  text-blue-800  ">
-            <span className="px-2  bg-[#bde3f8] rounded text-sm ">
-              {props.madeWith[0]}
+            <span className="px-2  bg-[#5bc6ff] rounded text-sm ">
+              {props?.madeWith[0]}
             </span>
-            <span className="px-2 bg-[#37BCF8] rounded text-sm ">
+            <span className="px-2 bg-[#3efffc] rounded text-sm ">
               {props.madeWith[1]}
             </span>
-            {props.madeWith[2] ? (
+            <span className="px-2 bg-[#16d760] rounded text-sm ">
+              {props.madeWith[2] ? props.madeWith[2] : ""}
+            </span>
+            {props.madeWith[3] ? (
               <span className="m-w-0 px-2 bg-[#f69f4e] rounded text-sm ">
-                {props.madeWith[2]}
+                {props.madeWith[3]}
               </span>
             ) : (
               ""
             )}
           </div>
-          <div className="pt-4 font-poppinFont    ">
+          <div className="pt-4 font-poppinFont ">
             <p>{props.description}</p>
           </div>
         </div>
@@ -69,3 +73,19 @@ const Card = (props) => {
 };
 
 export default Card;
+
+{
+  /* {<span className="px-2  bg-[#bde3f8] rounded text-sm ">
+   {props.madeWith[0]}
+ </span>
+ <span className="px-2 bg-[#37BCF8] rounded text-sm ">
+   {props.madeWith[1]}
+ </span>
+ {props.madeWith[2] ? (
+   <span className="m-w-0 px-2 bg-[#f69f4e] rounded text-sm ">
+     {props.madeWith[2]}
+   </span>
+ ) : (
+   ""
+ )}} */
+}

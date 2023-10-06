@@ -1,5 +1,17 @@
 [
   {
+    "title": "Auth0 Authentication Example",
+    "language": "ReactJS, Auth0",
+    "description": "Explore my Auth0 Authentication Example, a project that demonstrates seamless user authentication using Auth0.",
+    "projectLink": "https://github.com/FaisalFasi/react-auth0-project"
+  },
+  {
+    "title": "SQL CRUD Operations Example",
+    "language": "ReactJS, Tailwind CSS, NodeJS, MySQL",
+    "description": "This example project provides a clear and practical understanding of the core operations that power many data-driven applications.",
+    "projectLink": "https://github.com/FaisalFasi/MySQL-CRUD"
+  },
+  {
     "title": "Fullstack Messaging App",
     "language": "ReactJS , NodeJS",
     "description": "A basic working example for real-time messaging app",

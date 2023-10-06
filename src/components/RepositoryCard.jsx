@@ -9,7 +9,7 @@ const RepositoryCard = (props) => {
     >
       <div className="flex items-center justify-center gap-4">
         <h1 className="font-bold text-lg">{props.repo.title} </h1>
-        <span className="text-xs font-bold px-2 py-1 rounded-[8px] text-[#2aae66] bg-[#c4f0d8]">
+        <span className="text-xs font-bold px-2 py-1 rounded-[8px] text-[#000000] bg-[#49ff9b]">
           {props.repo.language}
         </span>
       </div>

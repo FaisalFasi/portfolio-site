@@ -39,6 +39,7 @@ const Home = () => {
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
                 className="font-bold text-[#2aae66] whitespace-pre"
+                target="_blank"
               >
                 &nbsp; Javascript
               </a>
@@ -46,22 +47,25 @@ const Home = () => {
               <a
                 href="https://react.dev/"
                 className="font-bold text-[#2aae66] whitespace-pre  "
+                target="_blank"
               >
                 &nbsp; React js
               </a>
               ,
               <a
-                href="https://expressjs.com/"
+                href="https://nextjs.org/"
                 className="font-bold text-[#2aae66] whitespace-pre "
+                target="_blank"
               >
-                &nbsp; Express
+                &nbsp; Next js&nbsp;
               </a>
               ,
               <a
-                href="https://pugjs.org/api/getting-started.html"
+                href="https://expressjs.com/"
                 className="font-bold text-[#2aae66] whitespace-pre "
+                target="_blank"
               >
-                &nbsp; PUG js&nbsp;
+                &nbsp; Express
               </a>
               .&nbsp; I am a team player and always looking for new challenges
               and ways to improve myself.

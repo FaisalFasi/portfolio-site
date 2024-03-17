@@ -18,7 +18,7 @@ const projectDetails = [
     projectImg: "/images/netflix-img.png",
     paddingLeftRight: "lg:pr-[15%] lg:pl-24",
     titlePos: "lg:left-0",
-    websiteLink: "https://fr-netflix-clone.netlify.app",
+    websiteLink: "https://fr-netflix-clone.vercel.app",
     gitHubLink: "https://github.com/FaisalFasi/react-netflix-clone-project",
   },
   {

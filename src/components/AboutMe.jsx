@@ -109,7 +109,8 @@ const AboutMe = () => {
               <b className="text-[#B693F4]"> {">"}</b> &nbsp; skills
             </h1>
             <p className="  py-2 font-nuntinoFont text-[#718096]">
-              ["Laravel", "Node", "Express", "React", "Vue", "Wordpress"]
+              ["JavaScript","ReactJs", "NextJs", "NodeJs", "Express",
+              "Tailwind"]
             </p>
 
             <h1>

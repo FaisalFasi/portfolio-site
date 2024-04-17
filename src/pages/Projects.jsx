@@ -5,7 +5,7 @@ import Card from "../components/Card";
 import RepositoryCard from "../components/RepositoryCard";
 import Footer from "../components/Footer";
 import { ThemeContext } from "../context/ThemeContext.jsx";
-import projectDetails from "./projectDetails.js";
+import projectDetails from "../utils/projectDetails.js";
 import repositoriesInfo from "./repositoriesInfo.json";
 
 const Projects = () => {

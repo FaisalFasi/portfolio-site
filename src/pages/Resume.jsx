@@ -3,65 +3,9 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { FiDownload } from "react-icons/fi";
 import { ThemeContext } from "../context/ThemeContext";
+import { logos } from "../utils/LogoImgLinks.js";
+import { education, experiences } from "../utils/ResumeInfo.js";
 
-const education = [
-  {
-    title: "BIT (Beam Institute of Technology)",
-    duration: "Nov 2022 - Nov 2023",
-    location: "Berlin, Berlin, Germany",
-    description: "Web Development",
-  },
-  {
-    title: "Hajvery University Lahore",
-    duration: "Nov 2013 - May 2017",
-    location: "Lahore, Punjab, Pakistan",
-    description: "Bachelors in Computer Science (BSCS)",
-  },
-  {
-    title: "Govt. College Shalimar",
-    duration: "Jun 2011 - Apr 2013",
-    location: "Lahore, Punjab, Pakistan",
-    description: "Intermediate (ICS)",
-  },
-  {
-    title: "Govt. Comprehensive School",
-    duration: "Sep 2009 - May 2011",
-    location: "Lahore, Punjab, Pakistan",
-    description: "Matriculation (Science)",
-  },
-];
-
-const experiences = [
-  {
-    title: "Wivro (Jan 2024 - Current)",
-    location: "London, England, United Kingdom",
-    description: "Frontend Web Developer",
-  },
-  {
-    title: "Self-Directed Learning (Jan 2022 - Oct 2022)",
-    location: "Berlin, Berlin, Germany",
-    description: "Frontend Web Development with React JS",
-  },
-  {
-    title: "Upwork (Feb 2020 - Sep 2021)",
-    location: "Berlin, Berlin, Germany",
-    description: "Freelance Game Developer",
-  },
-  {
-    title: "BlueHorn Technology (Sep 2017 - Aug 2019)",
-    location: "Lahore, Punjab, Pakistan",
-    description: "Unity Game Developer",
-  },
-];
-
-const logos = [
-  { src: "/icons/html-5.svg", alt: "HTML", title: "HTML" },
-  { src: "/icons/css-3.svg", alt: "CSS3", title: "CSS3" },
-  { src: "/icons/js.svg", alt: "JS", title: "JS" },
-  { src: "/icons/react.svg", alt: "REACT", title: "REACT" },
-  { src: "/icons/next.webp", alt: "NEXT", title: "NEXT" },
-  { src: "/icons/node.png", alt: "NODE", title: "NODE" },
-];
 const Resume = () => {
   const { isDarkMode } = useContext(ThemeContext);
 

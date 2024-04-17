@@ -32,7 +32,7 @@ const Home = () => {
             </h1>
             {/* <p className="  text-lg font-poppinFont "> */}
             <p className="text-lg font-poppinFont flex flex-wrap justify-center lg:justify-start">
-              I am a Frontend Developer having 2+ years of experience in
+              I am a Frontend Developer having 3+ years of experience in
               developing state-of-the-art applications, building great user
               experiences by bringing simplicity to life and constantly
               learning. Skilled in technologies like

@@ -20,7 +20,7 @@ const Projects = () => {
       }`}
     >
       <Header />
-      <div className="mx-8">
+      <div className="mx-4 md:px-8 lg:px-[5%] xl:px-[10%]">
         {/* my project Heading  */}
         <div
           className={`mt-12${
@@ -37,21 +37,24 @@ const Projects = () => {
           </p>
         </div>
         {/* projects section  */}
-        {projectDetails.map((project, index) => {
-          return (
-            <Card
-              key={index}
-              title={project.title}
-              madeWith={project.madeWith}
-              description={project.description}
-              projectImg={project.projectImg}
-              paddingLeftRight={project.paddingLeftRight}
-              titlePos={project.titlePos}
-              websiteLink={project.websiteLink}
-              gitHubLink={project.gitHubLink}
-            />
-          );
-        })}
+
+        <section className="xl:px-[5%]">
+          {projectDetails.map((project, index) => {
+            return (
+              <Card
+                key={index}
+                title={project.title}
+                madeWith={project.madeWith}
+                description={project.description}
+                projectImg={project.projectImg}
+                paddingLeftRight={project.paddingLeftRight}
+                titlePos={project.titlePos}
+                websiteLink={project.websiteLink}
+                gitHubLink={project.gitHubLink}
+              />
+            );
+          })}
+        </section>
       </div>
       {/* repository section  */}
       <div>
@@ -79,12 +82,12 @@ const Projects = () => {
           </a>
         </div>
       </div>
-      {/* <div className="flex flex-col md:flex-row gap-0 md:gap-12 mx-6 md:mx-8 lg:mx-20 mt-8 mb-20"> */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 mx-6 md:mx-8  mt-8 mb-20">
+      {/* repository cards */}
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 mx-6 md:mx-8  mt-8 mb-20 xl:px-[5%]">
         {repositoriesInfo.map((repo, idx) => {
           return <RepositoryCard key={idx} repo={repo} />;
         })}
-      </div>
+      </section>
       {/* footer section */}
       <Footer />
     </div>

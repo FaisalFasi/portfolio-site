@@ -18,7 +18,8 @@ const Resume = () => {
       }`}
     >
       <Header />
-      <div className="mx-8">
+
+      <div className="mx-4 md:px-8 lg:px-[5%] xl:px-[10%]">
         {/* my project Heading  */}
         <div className="mt-12">
           <h1 className=" my-2 text-center text-5xl font-nuntinoFont font-extrabold ">

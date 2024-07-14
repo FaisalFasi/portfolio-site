@@ -3,7 +3,7 @@ export const education = [
     title: "BIT (Beam Institute of Technology)",
     duration: "Nov 2022 - Nov 2023",
     location: "Berlin, Berlin, Germany",
-    description: "Web Development",
+    description: "Full Stack Web Development",
   },
   {
     title: "Hajvery University Lahore",

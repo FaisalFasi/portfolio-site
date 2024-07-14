@@ -24,7 +24,7 @@ const Card = (props) => {
         </div>
         {/* 2nd part  */}
         <div
-          className={`lg:w-[40%] lg:absolute lg:top-1/2 ${
+          className={`lg:w-[45%] lg:absolute lg:top-1/2 ${
             props.titlePos
           } lg:transform lg:-translate-y-1/2 mb-4 px-4 py-6 shadow-lg drop-shadow-lg rounded-b-[20px] lg:rounded-[20px] lg:border lg:border-solid lg:border-size  ${
             isDarkMode

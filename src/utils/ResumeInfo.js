@@ -27,7 +27,12 @@ export const education = [
 
 export const experiences = [
   {
-    title: "Wivro (Jan 2024 - Current)",
+    title: "CLIQUP (Jun 2024 - Current)",
+    location: "Berlin, Berlin, Germany",
+    description: "Frontend Web Developer",
+  },
+  {
+    title: "Wivro (Jan 2024 - jun 2024)",
     location: "London, England, United Kingdom",
     description: "Frontend Web Developer",
   },

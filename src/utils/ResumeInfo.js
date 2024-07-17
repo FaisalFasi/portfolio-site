@@ -3,7 +3,7 @@ export const education = [
     title: "BIT (Beam Institute of Technology)",
     duration: "Nov 2022 - Nov 2023",
     location: "Berlin, Berlin, Germany",
-    description: "Web Development",
+    description: "Full Stack Web Development",
   },
   {
     title: "Hajvery University Lahore",
@@ -27,7 +27,12 @@ export const education = [
 
 export const experiences = [
   {
-    title: "Wivro (Jan 2024 - Current)",
+    title: "CLIQUP (Jun 2024 - Current)",
+    location: "Berlin, Berlin, Germany",
+    description: "Frontend Web Developer",
+  },
+  {
+    title: "Wivro (Jan 2024 - jun 2024)",
     location: "London, England, United Kingdom",
     description: "Frontend Web Developer",
   },

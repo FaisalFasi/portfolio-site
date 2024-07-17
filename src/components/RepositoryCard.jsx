@@ -7,7 +7,7 @@ const RepositoryCard = (props) => {
       target="_blank"
       className="flex flex-col items-start w-full   mt-8 px-6 py-4 shadow-lg drop-shadow-lg border border-solid rounded-[8px] hover:-translate-y-1  transition-all duration-200"
     >
-      <div className="flex items-center justify-center gap-4">
+      <div className="w-full flex items-center justify-between gap-4">
         <h1 className="font-bold text-lg">{props.repo.title} </h1>
         <span className="text-xs font-bold px-2 py-1 rounded-[8px] text-[#3e41ff] bg-[#49ff9b]">
           {props.repo.language}

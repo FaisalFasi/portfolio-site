@@ -45,7 +45,7 @@ const Card = (props) => {
               </a>
             </span>
           </div>
-          <div className="flex gap-2 mt-2 font-bold  text-blue-800  ">
+          <div className="flex flex-wrap gap-2 mt-2 font-bold  text-blue-800  ">
             <span className="px-2  bg-[#5bc6ff] rounded text-sm ">
               {props?.madeWith[0]}
             </span>

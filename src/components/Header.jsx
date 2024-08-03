@@ -62,10 +62,10 @@ const Header = () => {
 
   return (
     <div
-      className={`sticky top-0 z-50 flex items-center py-4 px-4 justify-between w-full bg-[rgba(255,255,255,0.98)]  ${
+      className={`sticky top-0 z-50 flex items-center py-4 px-4 justify-between w-full bg-[rgba(255,255,255,0.98)] border-b border-gray-400 ${
         isDarkMode
-          ? " bg-dark-bgFooter text-dark-text"
-          : " bg-[#f7fafc] text-light-text"
+          ? "bg-dark-bgFooter text-dark-text border-gray-700"
+          : "bg-[#f7fafc] text-light-text border-gray-400"
       }`}
     >
       {/* Heading  */}

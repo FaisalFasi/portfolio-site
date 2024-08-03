@@ -20,7 +20,7 @@ const Projects = () => {
       }`}
     >
       <Header />
-      <div className="mx-4 md:px-8 lg:px-[5%] xl:px-[10%]">
+      <div className="mx-4 md:px-8 xl:px-[10%]">
         {/* my project Heading  */}
         <div
           className={`mt-12${

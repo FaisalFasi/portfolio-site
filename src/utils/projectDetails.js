@@ -1,5 +1,16 @@
 const projectDetails = [
   {
+    title: "FR-Photo-Editor",
+    madeWith: ["NextJs", "Clerk", "Stripe", "MongoDB", "Cloudinary"],
+    description:
+      "Transform your photos effortlessly with AI-Photo-Editor, a powerful tool that leverages AI to enhance and edit images with ease and precision.",
+    projectImg: "/images/ai-photoEditor.png",
+    paddingLeftRight: "lg:pl-[15%] lg:pr-24",
+    titlePos: "lg:right-0",
+    websiteLink: "https://fr-photo-editor.vercel.app/",
+    gitHubLink: "https://github.com/FaisalFasi/fr-photo-editor",
+  },
+  {
     title: "DayBurst",
     madeWith: ["NextJs", "Tailwind CSS", "Material-UI"],
     description:

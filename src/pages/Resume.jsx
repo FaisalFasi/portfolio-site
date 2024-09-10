@@ -17,11 +17,9 @@ const Resume = () => {
           : "bg-light-background  text-[#1a202c]"
       }`}
     >
-      <Header />
-
       <div className="mx-4 md:px-8 lg:px-[5%] xl:px-[10%]">
         {/* my project Heading  */}
-        <div className="mt-12">
+        <div className="pt-12">
           <h1 className=" my-2 text-center text-5xl font-nuntinoFont font-extrabold ">
             Resume
           </h1>
@@ -103,7 +101,7 @@ const Resume = () => {
               ))}
             </div>
           </div>
-          <div className="pt-10 mb-20 flex justify-center">
+          <div className="pt-10 pb-20 flex justify-center">
             <a
               href="/cv/Faisal Rehman CV.pdf"
               className="flex items-center gap-2 font-bold text-white px-6 py-3 rounded-[10px] bg-[#2bae66] hover:opacity-80  cursor-pointer"
@@ -114,7 +112,6 @@ const Resume = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

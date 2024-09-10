@@ -13,7 +13,6 @@ const AboutMe = () => {
   };
   useEffect(() => {
     if (count >= 27) {
-      console.log("  Completed");
       setTypescriptCompleted(true);
     }
   });
@@ -28,6 +27,8 @@ const AboutMe = () => {
   };
 
   useEffect(() => {
+    checkWindowSize();
+
     // Add event listener for "resize" event on the window object
     window.addEventListener("resize", checkWindowSize);
 
@@ -35,7 +36,7 @@ const AboutMe = () => {
     return () => {
       window.removeEventListener("resize", checkWindowSize);
     };
-  }, []);
+  }, [window.innerWidth]);
 
   return (
     <div>

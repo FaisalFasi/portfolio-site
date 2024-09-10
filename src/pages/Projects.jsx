@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
-import Header from "../components/Header";
 import { AiFillGithub } from "react-icons/ai";
 import Card from "../components/Card";
 import RepositoryCard from "../components/RepositoryCard";
-import Footer from "../components/Footer";
 import { ThemeContext } from "../context/ThemeContext.jsx";
 import projectDetails from "../utils/projectDetails.js";
 import repositoriesInfo from "./repositoriesInfo.json";
@@ -19,11 +17,10 @@ const Projects = () => {
           : " bg-light-background text-light-text"
       }`}
     >
-      <Header />
       <div className="mx-4 md:px-8 xl:px-[10%]">
         {/* my project Heading  */}
         <div
-          className={`mt-12${
+          className={`pt-12${
             isDarkMode
               ? " bg-dark-bgBody text-dark-text"
               : " bg-light-background text-light-text"
@@ -83,13 +80,11 @@ const Projects = () => {
         </div>
       </div>
       {/* repository cards */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 mx-6 md:mx-8  mt-8 mb-20 xl:px-[5%]">
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 mx-6 md:mx-8  mt-8 pb-20 xl:px-[5%]">
         {repositoriesInfo.map((repo, idx) => {
           return <RepositoryCard key={idx} repo={repo} />;
         })}
       </section>
-      {/* footer section */}
-      <Footer />
     </div>
   );
 };

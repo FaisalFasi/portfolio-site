@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
-import Header from "../components/Header";
 import AboutMe from "../components/AboutMe";
-import Footer from "../components/Footer";
 import { ThemeContext } from "../context/ThemeContext";
 
 const technologies = [
@@ -12,17 +10,8 @@ const technologies = [
   { name: "React.js", url: "https://react.dev/" },
   { name: "Next.js", url: "https://nextjs.org/" },
   { name: "Node.js", url: "https://nodejs.org/" },
-  // { name: "ExpressJS", url: "https://expressjs.com/" },
   { name: "MySQL", url: "https://www.mysql.com/" },
   { name: "MongoDB", url: "https://www.mongodb.com/" },
-  // {
-  //   name: "HTML5",
-  //   url: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
-  // },
-  // {
-  //   name: "CSS3",
-  //   url: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3",
-  // },
   { name: "Tailwind CSS", url: "https://tailwindcss.com/" },
 ];
 const Home = () => {
@@ -36,7 +25,7 @@ const Home = () => {
           : "bg-light-background  text-light-text"
       }`}
     >
-      <Header />
+      {/* <Header /> */}
       <div id="home" className=" py-10 px-4 md:px-8 lg:px-[5%] xl:px-[15%]">
         <div className="flex flex-col lg:flex-row justify-center items-center">
           <img
@@ -76,7 +65,7 @@ const Home = () => {
         {/* about me section  */}
         <AboutMe />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

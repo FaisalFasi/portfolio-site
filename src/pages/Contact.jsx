@@ -9,16 +9,15 @@ const Contact = () => {
 
   return (
     <div
-      className={`h-full ${
+      className={`pb-20 ${
         isDarkMode
           ? "bg-dark-background  text-dark-text"
           : "bg-light-background  text-[#1a202c]"
       }`}
     >
-      <Header />
       <div className="mx-8">
         {/* my project Heading  */}
-        <div className="mt-12">
+        <div className="pt-12">
           <h1 className=" my-2 text-center text-5xl font-nuntinoFont font-extrabold   ">
             Contact
           </h1>
@@ -29,7 +28,6 @@ const Contact = () => {
       </div>
       {/* form section  */}
       <SendMessageCard />
-      <Footer />
     </div>
   );
 };

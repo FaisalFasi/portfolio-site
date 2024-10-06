@@ -12,10 +12,13 @@
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
     "@heroicons/react": "^2.0.18",
+    "framer-motion": "^11.11.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
-    "react-simple-typewriter": "^5.0.1"
+    "react-simple-typewriter": "^5.0.1",
+    "react-typewriter-effect": "^1.1.0",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",

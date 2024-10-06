@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
-import Header from "../components/Header";
 import SendMessageCard from "../components/SendMessageCard";
-import Footer from "../components/Footer";
 import { ThemeContext } from "../context/ThemeContext";
 
 const Contact = () => {

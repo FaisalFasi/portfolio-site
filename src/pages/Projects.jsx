@@ -37,19 +37,7 @@ const Projects = () => {
 
         <section className="xl:px-[5%]">
           {projectDetails.map((project, index) => {
-            return (
-              <Card
-                key={index}
-                title={project.title}
-                madeWith={project.madeWith}
-                description={project.description}
-                projectImg={project.projectImg}
-                paddingLeftRight={project.paddingLeftRight}
-                titlePos={project.titlePos}
-                websiteLink={project.websiteLink}
-                gitHubLink={project.gitHubLink}
-              />
-            );
+            return <Card key={index} index={index} project={project} />;
           })}
         </section>
       </div>

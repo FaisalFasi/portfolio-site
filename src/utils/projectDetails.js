@@ -24,7 +24,7 @@ const projectDetails = [
     projectImg: "/images/fr-realEstate_img.png",
 
     websiteLink: "https://fr-real-estate.onrender.com/",
-    gitHubLink: "https://github.com/FaisalFasi/FR-Shop",
+    gitHubLink: "https://github.com/FaisalFasi/fr-real-estate",
   },
 
   {

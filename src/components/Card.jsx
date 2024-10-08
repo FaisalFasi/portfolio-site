@@ -41,7 +41,7 @@ const Card = ({ project, index }) => {
         className={`
           min-h-[100%] min-w-[100%] max-h-full max-w-full ${paddingLeftRight} `}
       >
-        <div className="h-auto w-full max-w-full shadow-lg rounded-lg bg-white overflow-hidden aspect-w-16 aspect-h-9">
+        <div className="h-auto w-full max-w-full shadow-lg rounded-lg overflow-hidden aspect-w-16 aspect-h-9">
           <img
             src={project.projectImg}
             alt=""

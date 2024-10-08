@@ -3,6 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../context/ThemeContext.jsx";
+import CurvedLine from "./animation/CurvedLine.jsx";
 
 const Header = () => {
   const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
@@ -69,10 +70,13 @@ const Header = () => {
       }`}
     >
       {/* Heading  */}
-      <div className=" ">
+      <div className="relative">
         <h1 className="text-lg sm:text-xl md:text-2xl font-extrabold font-nuntinoFont ">
           Faisal Rehman
         </h1>
+        <span className="absolute top-4 left-0 w-full h-full flex justify-center">
+          <CurvedLine />
+        </span>
       </div>
       <div className="absolute top-2.5 right-16 ">
         <button

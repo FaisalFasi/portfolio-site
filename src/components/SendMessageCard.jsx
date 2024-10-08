@@ -38,7 +38,7 @@ const SendMessageCard = () => {
 
   return (
     <div className="mx-4 md:mx-[10%] lg:mx-[20%] my-10">
-      <div className="flex justify-between flex-col md:flex-row bg-black p-4 md:p-14 rounded-[10px]">
+      <div className="flex justify-between flex-col md:flex-row bg-dark-bgFooter p-4 md:p-14 rounded-[10px]">
         <div>
           <div className="text-white font-nuntinoFont">
             <h1 className="text-3xl font-extrabold">Form Details</h1>
@@ -124,7 +124,7 @@ const SendMessageCard = () => {
               <input
                 type="text"
                 name="user_name"
-                className="w-full pl-10 p-2.5 text-sm rounded-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block dark:bg-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="w-full pl-10 p-2.5 text-sm rounded-lg  border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block dark:bg-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Faisal Rehman"
                 required
               />
@@ -139,7 +139,7 @@ const SendMessageCard = () => {
               <input
                 type="email"
                 name="user_email"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="faisalfasi18@gmail.com"
                 required
               />
@@ -151,7 +151,7 @@ const SendMessageCard = () => {
               name="message"
               id="message"
               placeholder="Message"
-              className="w-full min-h-[100px] rounded p-2 border border-gray-300"
+              className={` w-full min-h-[100px] rounded p-2 border text-black border-gray-300`}
               required
             ></textarea>
             <div className="flex justify-center mt-4">

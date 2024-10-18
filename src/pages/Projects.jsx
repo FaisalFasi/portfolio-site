@@ -1,13 +1,29 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { AiFillGithub } from "react-icons/ai";
 import Card from "../components/Card";
 import RepositoryCard from "../components/RepositoryCard";
 import { ThemeContext } from "../context/ThemeContext.jsx";
 import projectDetails from "../utils/projectDetails.js";
 import repositoriesInfo from "./repositoriesInfo.json";
+import PaginationRounded from "../components/pagination/Pagination.jsx";
 
 const Projects = () => {
   const { isDarkMode } = useContext(ThemeContext);
+  const projectsPerPage = 3; // Number of projects per page
+  const [currentPage, setCurrentPage] = useState(1); // State for the current page
+  // ceil is used to round up to the nearest whole number like 1.1 to 2 and 1.9 to 2
+  const totalPages = Math.ceil(projectDetails.length / projectsPerPage); // Total number of pages
+
+  // Get current projects for the current page
+  const currentProjects = projectDetails.slice(
+    //     (currentPage - 1) * projectsPerPage, will give the starting index of the projects for the current page
+    (currentPage - 1) * projectsPerPage,
+    currentPage * projectsPerPage
+  );
+
+  const handlePageChange = (event, value) => {
+    setCurrentPage(value); // Update the page number when pagination is changed
+  };
 
   return (
     <div
@@ -34,12 +50,18 @@ const Projects = () => {
           </p>
         </div>
         {/* projects section  */}
-
         <section className="xl:px-[5%]">
-          {projectDetails.map((project, index) => {
+          {currentProjects.map((project, index) => {
             return <Card key={index} index={index} project={project} />;
           })}
         </section>
+        <div className={`flex justify-center py-10`}>
+          <PaginationRounded
+            count={totalPages}
+            page={currentPage}
+            onChange={handlePageChange}
+          />
+        </div>
       </div>
       {/* repository section  */}
       <div>

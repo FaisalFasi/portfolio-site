@@ -49,23 +49,6 @@ const Card = ({ project, index }) => {
           />
         </div>
 
-        {/* <div className="shadow-lg rounded-lg bg-white">
-          <img
-            src={project.projectImg}
-            alt=""
-            className="h-full w-full object-contain rounded-t-[20px] rounded-lg-[20px] lg:shadow-lg shadow-md shadow-blue-400 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
-          />
-        </div> */}
-
-        {/* <div className="h-[450px] lg:h-[550px] w-full shadow-lg rounded-lg bg-white">
-          <img
-            src={project.projectImg}
-            alt=""
-            className="h-[450px] lg:h-[550px] w-full rounded-t-[20px] rounded-lg-[20px] lg:shadow-lg shadow-md shadow-blue-400 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
-
-            // className=" rounded-t-[20px] rounded-lg-[20px]  lg:shadow-lg"
-          />
-        </div> */}
         {/* 2nd part  */}
         <div
           className={`lg:w-[45%] lg:absolute lg:top-1/2 opacity-90 ${titlePos} lg:transform lg:-translate-y-1/2 mb-4 px-4 py-6 shadow-lg drop-shadow-lg rounded-b-[20px] lg:rounded-[20px] lg:border lg:border-solid lg:border-size  ${

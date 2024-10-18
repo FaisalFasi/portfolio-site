@@ -55,7 +55,9 @@ const Projects = () => {
             return <Card key={index} index={index} project={project} />;
           })}
         </section>
-        <div className={`flex justify-center py-10`}>
+        {/* Pagination */}
+        <div className={`flex justify-center items-center gap-2 py-10`}>
+          <span>Pages:</span>
           <PaginationRounded
             count={totalPages}
             page={currentPage}

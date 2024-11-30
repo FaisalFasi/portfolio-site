@@ -20,7 +20,7 @@ const Footer = () => {
             : " bg-[#f7fafc] text-light-text"
         }`}
       >
-        <p className="">© 2023 Faisal Rehman</p>
+        <p className="">© 2022 Faisal Rehman</p>
         <div className="flex items-center mt-6 md:mt-0">
           <span> {"Built with: "}</span>
           <pre> </pre>

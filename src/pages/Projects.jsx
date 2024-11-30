@@ -1,15 +1,29 @@
-import React, { useContext } from "react";
-import Header from "../components/Header";
+import React, { useContext, useState } from "react";
 import { AiFillGithub } from "react-icons/ai";
 import Card from "../components/Card";
 import RepositoryCard from "../components/RepositoryCard";
-import Footer from "../components/Footer";
 import { ThemeContext } from "../context/ThemeContext.jsx";
 import projectDetails from "../utils/projectDetails.js";
 import repositoriesInfo from "./repositoriesInfo.json";
+import PaginationRounded from "../components/pagination/Pagination.jsx";
 
 const Projects = () => {
   const { isDarkMode } = useContext(ThemeContext);
+  const projectsPerPage = 3; // Number of projects per page
+  const [currentPage, setCurrentPage] = useState(1); // State for the current page
+  // ceil is used to round up to the nearest whole number like 1.1 to 2 and 1.9 to 2
+  const totalPages = Math.ceil(projectDetails.length / projectsPerPage); // Total number of pages
+
+  // Get current projects for the current page
+  const currentProjects = projectDetails.slice(
+    //     (currentPage - 1) * projectsPerPage, will give the starting index of the projects for the current page
+    (currentPage - 1) * projectsPerPage,
+    currentPage * projectsPerPage
+  );
+
+  const handlePageChange = (event, value) => {
+    setCurrentPage(value); // Update the page number when pagination is changed
+  };
 
   return (
     <div
@@ -19,11 +33,10 @@ const Projects = () => {
           : " bg-light-background text-light-text"
       }`}
     >
-      <Header />
-      <div className="mx-8">
+      <div className="mx-4 md:px-8 xl:px-[10%]">
         {/* my project Heading  */}
         <div
-          className={`mt-12${
+          className={`pt-12${
             isDarkMode
               ? " bg-dark-bgBody text-dark-text"
               : " bg-light-background text-light-text"
@@ -37,21 +50,20 @@ const Projects = () => {
           </p>
         </div>
         {/* projects section  */}
-        {projectDetails.map((project, index) => {
-          return (
-            <Card
-              key={index}
-              title={project.title}
-              madeWith={project.madeWith}
-              description={project.description}
-              projectImg={project.projectImg}
-              paddingLeftRight={project.paddingLeftRight}
-              titlePos={project.titlePos}
-              websiteLink={project.websiteLink}
-              gitHubLink={project.gitHubLink}
-            />
-          );
-        })}
+        <section className="xl:px-[5%]">
+          {currentProjects.map((project, index) => {
+            return <Card key={index} index={index} project={project} />;
+          })}
+        </section>
+        {/* Pagination */}
+        <div className={`flex justify-center items-center gap-2 py-10`}>
+          <span>Pages:</span>
+          <PaginationRounded
+            count={totalPages}
+            page={currentPage}
+            onChange={handlePageChange}
+          />
+        </div>
       </div>
       {/* repository section  */}
       <div>
@@ -79,14 +91,12 @@ const Projects = () => {
           </a>
         </div>
       </div>
-      {/* <div className="flex flex-col md:flex-row gap-0 md:gap-12 mx-6 md:mx-8 lg:mx-20 mt-8 mb-20"> */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 mx-6 md:mx-8  mt-8 mb-20">
+      {/* repository cards */}
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 mx-6 md:mx-8  mt-8 pb-20 xl:px-[5%]">
         {repositoriesInfo.map((repo, idx) => {
           return <RepositoryCard key={idx} repo={repo} />;
         })}
-      </div>
-      {/* footer section */}
-      <Footer />
+      </section>
     </div>
   );
 };

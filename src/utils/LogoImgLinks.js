@@ -36,7 +36,7 @@ export const logos = [
     link: "https://nodejs.org/",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCN_L-y9vq_eXdROfWn-VZ__SrQNSPzrVHyw&s",
     alt: "Express.js",
     title: "Express.js",
     link: "https://expressjs.com/",
@@ -66,7 +66,7 @@ export const logos = [
     link: "https://git-scm.com/",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    src: "https://cdn.worldvectorlogo.com/logos/github-icon-2.svg",
     alt: "GitHub",
     title: "GitHub",
     link: "https://github.com/",

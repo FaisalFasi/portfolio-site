@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FiDownload } from "react-icons/fi";
 import { logos } from "../../utils/LogoImgLinks";
 import { tools } from "../../utils/LogoImgLinks";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const Skills = () => {
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
     <div className="px-4 py-8">
       {/* Title */}
       <div className="mb-6 text-center">
         <h1 className="text-4xl font-bold">My Skills</h1>
-        <p className="mt-2 text-lg text-gray-600">
+        <p
+          className={`mt-2 text-lg ${
+            isDarkMode ? "text-dark-text" : "text-gray-700"
+          }`}
+        >
           Here are some of the technologies and tools I work with to create
           high-quality web applications.
         </p>
@@ -33,7 +40,7 @@ const Skills = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="w-16 h-16 mx-auto"
+                  className="w-16 h-16 object-cover rounded-full mx-auto"
                   title={logo.title}
                 />
               </a>
@@ -61,7 +68,7 @@ const Skills = () => {
                 <img
                   src={tool.src}
                   alt={tool.alt}
-                  className="w-16 h-16 mx-auto"
+                  className="w-16 h-16 object-cover rounded-full mx-auto"
                   title={tool.title}
                 />
               </a>

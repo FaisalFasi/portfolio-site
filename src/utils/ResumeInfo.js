@@ -27,19 +27,19 @@ export const education = [
 
 export const experiences = [
   {
-    title: "CLIQUP (Jun 2024 - Current)",
+    title: "CLIQUP (Jan 2024 - Present)",
     location: "Berlin, Berlin, Germany",
     description: "Frontend Web Developer",
   },
   {
-    title: "Wivro (Jan 2024 - jun 2024)",
+    title: "BIT - Beam Institute of Technology (Nov 2022 - Nov 2023)",
+    location: "Berlin, Berlin, Germany",
+    description: "Full Stack Web Developer Student",
+  },
+  {
+    title: "Wivro (Jun 2021 - Oct 2022)",
     location: "London, England, United Kingdom",
     description: "Frontend Web Developer",
-  },
-  {
-    title: "Self-employed (Jun 2021 - Oct 2022)",
-    location: "Berlin, Berlin, Germany",
-    description: "Frontend Web Development",
   },
   {
     title: "Upwork (Jan 2020 - Dec 2021)",

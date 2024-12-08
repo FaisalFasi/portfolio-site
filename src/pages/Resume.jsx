@@ -32,7 +32,7 @@ const Resume = () => {
           {/* Education  */}
           <div className=" ">
             <div>
-              <h1 className=" my-2 text-center md:text-left text-3xl font-nuntinoFont font-extrabold text-[#1a202c] ">
+              <h1 className=" my-2 text-center md:text-left text-3xl font-nuntinoFont font-extrabold  ">
                 Education
               </h1>
             </div>

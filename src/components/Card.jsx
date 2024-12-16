@@ -2,10 +2,36 @@ import React, { useContext } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
 import { ThemeContext } from "../context/ThemeContext.jsx";
+// import "./card.css";
 
-const bgColors = ["#bde3f8", "#37BCF8", "#f69f4e", "#07ff66", "#94ff8d"];
-const Card = (props) => {
+const bgColors = [
+  "#bde3f8",
+  "#f69f4e",
+  "#07ff66",
+  "#b7a1ff",
+  "#ffe375",
+  "#37BCF8",
+  "#ffa5f2",
+  "#9cfffc",
+];
+const colorMap = {};
+
+const Card = ({ project, index }) => {
   const { isDarkMode } = useContext(ThemeContext);
+
+  const getColorForTech = (tech) => {
+    if (!colorMap[tech]) {
+      colorMap[tech] = bgColors[Object.keys(colorMap).length % bgColors.length];
+    }
+    return colorMap[tech];
+  };
+
+  const isEven = index % 2 === 0;
+
+  const paddingLeftRight = isEven
+    ? "lg:pr-[15%] lg:pl-24"
+    : "lg:pl-[15%] lg:pr-24";
+  const titlePos = isEven ? "lg:left-0" : "lg:right-0";
 
   return (
     <div id="project-1" className="relative w-full mt-16">
@@ -13,20 +39,19 @@ const Card = (props) => {
 
       <div
         className={`
-          min-h-[100%] min-w-[100%] max-h-full max-w-full ${props.paddingLeftRight} `}
+          min-h-[100%] min-w-[100%] max-h-full max-w-full ${paddingLeftRight} `}
       >
-        <div className="">
+        <div className="h-auto w-full max-w-full shadow-lg rounded-lg overflow-hidden aspect-w-16 aspect-h-9">
           <img
-            src={props.projectImg}
+            src={project.projectImg}
             alt=""
-            className="rounded-t-[20px] rounded-lg-[20px] lg:rounded-b-[20px] lg:mb-2 lg:shadow-lg"
+            className="h-full w-full object-cover rounded-t-[20px] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
           />
         </div>
+
         {/* 2nd part  */}
         <div
-          className={`lg:w-[40%] lg:absolute lg:top-1/2 ${
-            props.titlePos
-          } lg:transform lg:-translate-y-1/2 mb-4 px-4 py-6 shadow-lg drop-shadow-lg rounded-b-[20px] lg:rounded-[20px] lg:border lg:border-solid lg:border-size  ${
+          className={`lg:w-[45%] lg:absolute lg:top-1/2 opacity-90 ${titlePos} lg:transform lg:-translate-y-1/2 mb-4 px-4 py-6 shadow-lg drop-shadow-lg rounded-b-[20px] lg:rounded-[20px] lg:border lg:border-solid lg:border-size  ${
             isDarkMode
               ? "bg-dark-background  text-dark-text"
               : "bg-light-background   text-[#1a202c]"
@@ -34,37 +59,31 @@ const Card = (props) => {
         >
           <div className="flex justify-between items-center  ">
             <h1 className="text-3xl  font-nuntinoFont font-bold ">
-              {props.title}
+              {project.title}
             </h1>
             <span className="flex gap-4">
-              <a href={props.websiteLink} target="_blank">
+              <a href={project.websiteLink} target="_blank">
                 <FiExternalLink className="h-7 w-7 text-green-500" />
               </a>
-              <a href={props.gitHubLink} target="_blank">
+              <a href={project.gitHubLink} target="_blank">
                 <AiFillGithub className="h-7 w-7 text-green-500" />
               </a>
             </span>
           </div>
-          <div className="flex gap-2 mt-2 font-bold  text-blue-800  ">
-            <span className="px-2  bg-[#5bc6ff] rounded text-sm ">
-              {props?.madeWith[0]}
-            </span>
-            <span className="px-2 bg-[#3efffc] rounded text-sm ">
-              {props.madeWith[1]}
-            </span>
-            <span className="px-2 bg-[#16d760] rounded text-sm ">
-              {props.madeWith[2] ? props.madeWith[2] : ""}
-            </span>
-            {props.madeWith[3] ? (
-              <span className="m-w-0 px-2 bg-[#f69f4e] rounded text-sm ">
-                {props.madeWith[3]}
+          <div className="flex flex-wrap gap-2 mt-2 font-bold text-blue-800">
+            {project.madeWith.map((tech, index) => (
+              <span
+                key={index}
+                className={`px-2 rounded text-sm`}
+                style={{ backgroundColor: getColorForTech(tech) }}
+              >
+                {tech}
               </span>
-            ) : (
-              ""
-            )}
+            ))}
           </div>
+
           <div className="pt-4 font-poppinFont ">
-            <p>{props.description}</p>
+            <p>{project.description}</p>
           </div>
         </div>
       </div>
@@ -73,19 +92,3 @@ const Card = (props) => {
 };
 
 export default Card;
-
-{
-  /* {<span className="px-2  bg-[#bde3f8] rounded text-sm ">
-   {props.madeWith[0]}
- </span>
- <span className="px-2 bg-[#37BCF8] rounded text-sm ">
-   {props.madeWith[1]}
- </span>
- {props.madeWith[2] ? (
-   <span className="m-w-0 px-2 bg-[#f69f4e] rounded text-sm ">
-     {props.madeWith[2]}
-   </span>
- ) : (
-   ""
- )}} */
-}

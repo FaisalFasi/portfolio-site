@@ -26,6 +26,15 @@ const projectDetails = [
     websiteLink: "https://fr-real-estate.onrender.com/",
     gitHubLink: "https://github.com/FaisalFasi/fr-real-estate",
   },
+  {
+    title: "FR-Blogs",
+    madeWith: ["NextJs", "CSS3", "MongoDB", "NextAuth"],
+    description:
+      "Introducing FR-Blogs, a versatile platform combining blogging, portfolio showcasing, and seamless login options. Users can effortlessly share thoughts, stories, and portfolios via Google login or custom credentials. Ideal for bloggers and creators.",
+    projectImg: "/images/fr-blogs.png",
+    websiteLink: "https://fr-bolgs.vercel.app/",
+    gitHubLink: "https://github.com/FaisalFasi/nextjs-blogs-project",
+  },
 
   {
     title: "DayBurst",
@@ -36,15 +45,7 @@ const projectDetails = [
     websiteLink: "https://dayburst-app.vercel.app/",
     gitHubLink: "https://github.com/FaisalFasi/dayburst-app",
   },
-  {
-    title: "FR-Blogs",
-    madeWith: ["NextJs", "CSS3", "MongoDB", "NextAuth"],
-    description:
-      "Introducing FR-Blogs, a versatile platform combining blogging, portfolio showcasing, and seamless login options. Users can effortlessly share thoughts, stories, and portfolios via Google login or custom credentials. Ideal for bloggers and creators.",
-    projectImg: "/images/fr-blogs.png",
-    websiteLink: "https://fr-bolgs.vercel.app/",
-    gitHubLink: "https://github.com/FaisalFasi/nextjs-blogs-project",
-  },
+
   {
     title: "Netflix Clone",
     madeWith: ["React", "Tailwind", "TMDB Api", "FireBase"],

@@ -82,25 +82,14 @@ const projectDetails = [
     websiteLink: "https://rice-app.vercel.app/",
     gitHubLink: "https://github.com/FaisalFasi/rice-app",
   },
-  {
-    title: "TODO APP",
-    madeWith: ["React", "Tailwind", "Context"],
-    description:
-      "A simple and intuitive todo app to help you organize tasks and stay productive, with the ability to add, delete, and mark tasks as complete",
-    projectImg: "/images/todoApp-img.png",
-    websiteLink: "https://faisalrehman-todoapp.netlify.app/",
-    gitHubLink: "https://github.com/FaisalFasi/react-todo-list-project",
-  },
+  // {
+  //   title: "TODO APP",
+  //   madeWith: ["React", "Tailwind", "Context"],
+  //   description:
+  //     "A simple and intuitive todo app to help you organize tasks and stay productive, with the ability to add, delete, and mark tasks as complete",
+  //   projectImg: "/images/todoApp-img.png",
+  //   websiteLink: "https://faisalrehman-todoapp.netlify.app/",
+  //   gitHubLink: "https://github.com/FaisalFasi/react-todo-list-project",
+  // },
 ];
 export default projectDetails;
-
-// {
-//   title: "FR-Shop",
-//   madeWith: ["React", "Tailwind", "Strapi", "Stripe", "PostgreSQL"],
-//   description:
-//     "Discover FR-Shop, where online shopping meets seamless user experience. This project is user-friendly e-commerce platforms. With features like product management, and secure checkout, the site provides a streamlined shopping journey. This websites server is down so please check the github repo",
-
-//   projectImg: "/images/fr-Shop.png
-//   websiteLink: "https://fr-shop.netlify.app/",
-//   gitHubLink: "https://github.com/FaisalFasi/FR-Shop",
-// },

@@ -18,10 +18,6 @@ const NasaParticle = () => {
     setColor(isDarkMode ? "#ffffff" : "#0396ff");
   }, [isDarkMode]);
 
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
-
   const options = useMemo(
     () => ({
       autoPlay: true,
@@ -517,13 +513,7 @@ const NasaParticle = () => {
   );
 
   if (init) {
-    return (
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
-    );
+    return <Particles id="tsparticles" options={options} />;
   }
 
   return <></>;

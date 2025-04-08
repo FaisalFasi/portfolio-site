@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import Typewriter from "typewriter-effect";
 import { ThemeContext } from "../context/ThemeContext";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const AboutMe = () => {
   const { isDarkMode } = useContext(ThemeContext);
@@ -28,7 +29,13 @@ const AboutMe = () => {
     },
     {
       title: "contactMe",
-      content: '["Github", "Facebook", "LinkedIn", "Instagram"]',
+      content: ["Github", "Facebook", "LinkedIn", "Instagram"],
+      links: [
+        "https://github.com/FaisalFasi",
+        "https://www.facebook.com/faisalfasi18",
+        "https://www.linkedin.com/in/faisalrehman18/",
+        "https://www.instagram.com/faisalfasi18/",
+      ],
     },
   ];
 
@@ -108,7 +115,25 @@ const AboutMe = () => {
                   transition={{ duration: 0.2 }} // Duration of the animation
                   className="py-2 font-poppinFont text-[#718096]"
                 >
-                  {info.content}
+                  <div>
+                    {info.title === "contactMe" ? (
+                      <div className="flex gap-4">
+                        {info?.content?.map((c, idx) => {
+                          return (
+                            <Link
+                              className="hover:underline"
+                              to={info.links[idx]}
+                              target="blank"
+                            >
+                              {c},
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    ) : (
+                      info?.content
+                    )}
+                  </div>
                 </motion.p>
               </div>
             ))}

@@ -32,9 +32,9 @@ export const experiences = [
     description: "Frontend Web Developer",
   },
   {
-    title: "BIT - Beam Institute of Technology (Nov 2022 - Nov 2023)",
+    title: "Freelance Full-Stack Web Developer (Nov 2022 - Nov 2023)",
     location: "Berlin, Berlin, Germany",
-    description: "Full Stack Web Developer Student",
+    description: "Full Stack Web Developer",
   },
   {
     title: "Wivro (Jun 2021 - Oct 2022)",

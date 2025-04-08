@@ -3,6 +3,8 @@ import { FiExternalLink } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
 import { ThemeContext } from "../context/ThemeContext.jsx";
 // import "./card.css";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const bgColors = [
   "#bde3f8",
@@ -34,24 +36,40 @@ const Card = ({ project, index }) => {
   const titlePos = isEven ? "lg:left-0" : "lg:right-0";
 
   return (
-    <div id="project-1" className="relative w-full mt-16">
+    <div id="project-1" className="relative w-full mt-16 ">
       {/* project 1 starts here 1st part */}
 
       <div
         className={`
           min-h-[100%] min-w-[100%] max-h-full max-w-full ${paddingLeftRight} `}
       >
-        <div className="h-auto w-full max-w-full shadow-lg rounded-lg overflow-hidden aspect-w-16 aspect-h-9">
-          <img
-            src={project.projectImg}
-            alt=""
-            className="h-full w-full object-cover rounded-t-[20px] transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
-          />
+        <div
+          className={` flex h-auto w-full max-w-full shadow-lg rounded-t-xl overflow-hidden aspect-w-16 aspect-h-9 border border-gray-500`}
+        >
+          <Carousel
+            showArrows={true}
+            showThumbs={false}
+            swipeable={true}
+            emulateTouch={true} // Enable touch emulation for mouse events
+            infiniteLoop
+            useKeyboardArrows
+            autoPlay
+            className="custom-carousel"
+          >
+            {project?.projectImg.map((image, idx) => (
+              <img
+                key={idx}
+                src={image}
+                alt="image"
+                className="h-full w-full object-cover rounded-t-xl transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
+              />
+            ))}
+          </Carousel>
         </div>
 
         {/* 2nd part  */}
         <div
-          className={`lg:w-[45%] lg:absolute lg:top-1/2 opacity-90 ${titlePos} lg:transform lg:-translate-y-1/2 mb-4 px-4 py-6 shadow-lg drop-shadow-lg rounded-b-[20px] lg:rounded-[20px] lg:border lg:border-solid lg:border-size  ${
+          className={`lg:w-[45%] lg:absolute lg:top-1/2 opacity-90 ${titlePos} lg:transform lg:-translate-y-1/2 mb-4 px-4 py-6 shadow-lg drop-shadow-lg rounded-b-[20px] lg:rounded-[20px] lg:border lg:border-solid lg:border-size border border-gray-500 ${
             isDarkMode
               ? "bg-dark-background  text-dark-text"
               : "bg-light-background   text-[#1a202c]"

@@ -41,11 +41,11 @@ export const experiences = [
     location: "London, England, United Kingdom",
     description: "Frontend Web Developer",
   },
-  {
-    title: "Upwork (Jan 2020 - Dec 2021)",
-    location: "Berlin, Berlin, Germany",
-    description: "Freelance Game Developer",
-  },
+  // {
+  //   title: "Upwork (Jan 2020 - Dec 2021)",
+  //   location: "Berlin, Berlin, Germany",
+  //   description: "Freelance Game Developer",
+  // },
   {
     title: "BlueHorn Technology (Sep 2017 - Aug 2019)",
     location: "Lahore, Punjab, Pakistan",

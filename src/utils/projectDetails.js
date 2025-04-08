@@ -1,10 +1,29 @@
 const projectDetails = [
   {
+    title: "E-Store",
+    madeWith: ["NextJs", "React", "Tailwind CSS", "Stripe", "MongoDB"],
+    description:
+      "E-Store is a modern and responsive e-commerce platform that offers a seamless shopping experience. It features a user-friendly interface, secure payment processing with Stripe, and efficient product management using MongoDB.",
+    projectImg: [
+      "/images/estore_images/image_1.png",
+      "/images/estore_images/image_2.png",
+      "/images/estore_images/image_3.png",
+      "/images/estore_images/image_5.png",
+      "/images/estore_images/image_6.png",
+      "/images/estore_images/image_7.png",
+      "/images/estore_images/image_8.png",
+      "/images/estore_images/image_10.png",
+      "/images/estore_images/image_1.png",
+    ],
+    websiteLink: "https://store-with-admin-dashboard.onrender.com/",
+    gitHubLink: "https://github.com/FaisalFasi/e-store-with-admin-dashboard",
+  },
+  {
     title: "FR-Photo-Editor",
     madeWith: ["NextJs", "Clerk", "Stripe", "MongoDB", "Cloudinary"],
     description:
       "Transform your photos effortlessly with AI-Photo-Editor, a powerful tool that leverages AI to enhance and edit images with ease and precision.",
-    projectImg: "/images/ai-photoEditor.png",
+    projectImg: ["/images/ai-photoEditor.png"],
     websiteLink: "https://fr-photo-editor.vercel.app/",
     gitHubLink: "https://github.com/FaisalFasi/fr-photo-editor",
   },
@@ -21,7 +40,7 @@ const projectDetails = [
     ],
     description:
       "FR-RealEstate is a user-friendly platform for creating and managing property posts. Users can contact post owners, find agents, delete listings, and search for properties, all while enjoying a seamless experience.",
-    projectImg: "/images/fr-realEstate_img.png",
+    projectImg: ["/images/fr-realEstate_img.png"],
 
     websiteLink: "https://fr-real-estate.onrender.com/",
     gitHubLink: "https://github.com/FaisalFasi/fr-real-estate",
@@ -31,7 +50,7 @@ const projectDetails = [
     madeWith: ["NextJs", "CSS3", "MongoDB", "NextAuth"],
     description:
       "Introducing FR-Blogs, a versatile platform combining blogging, portfolio showcasing, and seamless login options. Users can effortlessly share thoughts, stories, and portfolios via Google login or custom credentials. Ideal for bloggers and creators.",
-    projectImg: "/images/fr-blogs.png",
+    projectImg: ["/images/fr-blogs.png"],
     websiteLink: "https://fr-bolgs.vercel.app/",
     gitHubLink: "https://github.com/FaisalFasi/nextjs-blogs-project",
   },
@@ -41,7 +60,7 @@ const projectDetails = [
     madeWith: ["NextJs", "Tailwind CSS", "Material-UI"],
     description:
       "Experience seamless task management with DayBurst, a clean and responsive platform designed to enhance daily productivity and organization.",
-    projectImg: "/images/dayburst_img.png",
+    projectImg: ["/images/dayburst_img.png"],
     websiteLink: "https://dayburst-app.vercel.app/",
     gitHubLink: "https://github.com/FaisalFasi/dayburst-app",
   },
@@ -51,7 +70,7 @@ const projectDetails = [
     madeWith: ["React", "Tailwind", "TMDB Api", "FireBase"],
     description:
       "Discover your favorite movies and shows on my Netflix clone,providing a responsive and visually appealing platform for endless entertainment at your fingertips",
-    projectImg: "/images/netflix-img.png",
+    projectImg: ["/images/netflix-img.png"],
     websiteLink: "https://fr-netflix-clone.vercel.app",
     gitHubLink: "https://github.com/FaisalFasi/react-netflix-clone-project",
   },
@@ -60,7 +79,7 @@ const projectDetails = [
     madeWith: ["React", "Tailwind", "react-router"],
     description:
       "Welcome to my portfolio website, a showcase of my diverse skills and passion for web development where you can discover my projects and expertise in front-end and UI/UX..",
-    projectImg: "/images/portfolio-img.png",
+    projectImg: ["/images/portfolio-img.png"],
     websiteLink: "https://faisalrehman-portfolio.netlify.app",
     gitHubLink: "https://github.com/FaisalFasi/portfolio-site",
   },
@@ -69,7 +88,7 @@ const projectDetails = [
     madeWith: ["React", "Tailwind", "NodeJS", "Express", "MongoDB"],
     description:
       "PasteBin is a platform for easy code snippet sharing and storage. Users can quickly paste, update, and delete content, for seamless collaboration and sharing",
-    projectImg: "/images/fr-pasteBin.png",
+    projectImg: ["/images/fr-pasteBin.png"],
     websiteLink: "https://fr-pastebin.netlify.app/",
     gitHubLink: "https://github.com/FaisalFasi/mongodb-snippet-client",
   },
@@ -79,7 +98,7 @@ const projectDetails = [
     madeWith: ["NextJs", "Tailwind CSS", "Material-UI"],
     description:
       "Explore the online presence of a company with their sleek and informative website. This platform offers a modern and user-friendly interface to showcase services, team, and company information",
-    projectImg: "/images/rice_img.png",
+    projectImg: ["/images/rice_img.png"],
     websiteLink: "https://rice-app.vercel.app/",
     gitHubLink: "https://github.com/FaisalFasi/rice-app",
   },
@@ -88,7 +107,7 @@ const projectDetails = [
   //   madeWith: ["React", "Tailwind", "Context"],
   //   description:
   //     "A simple and intuitive todo app to help you organize tasks and stay productive, with the ability to add, delete, and mark tasks as complete",
-  //   projectImg: "/images/todoApp-img.png",
+  //   projectImg: ["/images/todoApp-img.png"],
   //   websiteLink: "https://faisalrehman-todoapp.netlify.app/",
   //   gitHubLink: "https://github.com/FaisalFasi/react-todo-list-project",
   // },

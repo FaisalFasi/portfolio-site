@@ -1,7 +1,18 @@
 const projectDetails = [
   {
     title: "E-Store",
-    madeWith: ["NextJs", "React", "Tailwind CSS", "Stripe", "MongoDB"],
+    madeWith: [
+      "React",
+      "Tailwind CSS",
+      "ExpressJs",
+      "MongoDB",
+      "Stripe Payments",
+      "JWT",
+      "Redis",
+      "Cloudinary",
+      "Sendgrid",
+      ,
+    ],
     description:
       "E-Store is a modern and responsive e-commerce platform that offers a seamless shopping experience. It features a user-friendly interface, secure payment processing with Stripe, and efficient product management using MongoDB.",
     projectImg: [

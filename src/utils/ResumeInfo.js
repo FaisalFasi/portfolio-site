@@ -27,14 +27,14 @@ export const education = [
 
 export const experiences = [
   {
-    title: "CLIQUP (Jan 2024 - Present)",
-    location: "Berlin, Berlin, Germany",
-    description: "Frontend Web Developer",
-  },
-  {
-    title: "Freelance Upwork (Nov 2022 - Nov 2023)",
+    title: "Freelance Upwork (Nov 2022 - Present)",
     location: "Berlin, Berlin, Germany",
     description: "Full Stack Web Developer",
+  },
+  {
+    title: "CLIQUP (Jun 2024 - Apr 2025)",
+    location: "Berlin, Berlin, Germany",
+    description: "Frontend Web Developer",
   },
   {
     title: "Wivro (Jun 2021 - Oct 2022)",
@@ -47,7 +47,7 @@ export const experiences = [
   //   description: "Freelance Game Developer",
   // },
   {
-    title: "BlueHorn Technology (Sep 2017 - Aug 2019)",
+    title: "BlueHorn Technology (Sep 2016 - Aug 2019)",
     location: "Lahore, Punjab, Pakistan",
     description: "Unity Game Developer",
   },

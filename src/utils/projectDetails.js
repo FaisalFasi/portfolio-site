@@ -1,5 +1,36 @@
 const projectDetails = [
   {
+    title: "Risk Monitor Engine",
+    madeWith: [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "NEAR Protocol",
+      "NEAR Wallet Selector",
+      "Blockchain Integration",
+    ],
+    description:
+      "Risk Monitor Engine is a modern web application built with Next.js and React, focused on monitoring and analyzing risk-related data with blockchain integration. The platform connects seamlessly with the NEAR Protocol and multiple wallet providers, enabling secure interactions, real-time insights, and a clean, responsive dashboard designed for data-driven decision-making.",
+    projectImg: [
+      "/images/risk-engine/1.png",
+      "/images/risk-engine/2.png",
+      "/images/risk-engine/3.png",
+    ],
+    websiteLink: "https://risk-monitor-engine.onrender.com/",
+    // gitHubLink: "https://github.com/FaisalFasi/risk-monitor-engine", // change if repo name differs
+  },
+
+  {
+    title: "FR-Photo-Editor",
+    madeWith: ["NextJs", "Clerk", "Stripe", "MongoDB", "Cloudinary"],
+    description:
+      "Transform your photos effortlessly with AI-Photo-Editor, a powerful tool that leverages AI to enhance and edit images with ease and precision.",
+    projectImg: ["/images/ai-photoEditor.png"],
+    websiteLink: "https://fr-photo-editor.vercel.app/",
+    gitHubLink: "https://github.com/FaisalFasi/fr-photo-editor",
+  },
+  {
     title: "E-Store",
     madeWith: [
       "React",
@@ -28,15 +59,6 @@ const projectDetails = [
     ],
     websiteLink: "https://store-with-admin-dashboard.onrender.com/",
     gitHubLink: "https://github.com/FaisalFasi/e-store-with-admin-dashboard",
-  },
-  {
-    title: "FR-Photo-Editor",
-    madeWith: ["NextJs", "Clerk", "Stripe", "MongoDB", "Cloudinary"],
-    description:
-      "Transform your photos effortlessly with AI-Photo-Editor, a powerful tool that leverages AI to enhance and edit images with ease and precision.",
-    projectImg: ["/images/ai-photoEditor.png"],
-    websiteLink: "https://fr-photo-editor.vercel.app/",
-    gitHubLink: "https://github.com/FaisalFasi/fr-photo-editor",
   },
   {
     title: "FR-RealEstate",

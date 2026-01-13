@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import { BsTelephoneFill } from "react-icons/bs";
 import { MdEmail, MdLocationPin } from "react-icons/md";
 import {
@@ -10,10 +10,12 @@ import {
 } from "react-icons/ai";
 import { BiSolidUser } from "react-icons/bi";
 import emailjs from "@emailjs/browser";
+import { ThemeContext } from "../context/ThemeContext";
 
 const SendMessageCard = () => {
   const form = useRef();
   const [sentMessage, setSentMessage] = useState(false);
+  const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -37,12 +39,18 @@ const SendMessageCard = () => {
   };
 
   return (
-    <div className="mx-4 md:mx-[10%] lg:mx-[20%] my-10">
-      <div className="flex justify-between flex-col md:flex-row bg-dark-bgFooter p-4 md:p-14 rounded-[10px]">
+    <div className={` mx-4 md:mx-[10%] lg:mx-[20%] my-10`}>
+      <div
+        className={` ${
+          isDarkMode
+            ? "bg-dark-bgHeaderAboutMe text-dark-text"
+            : "bg-[#a6a6a6fd] text-black"
+        }  opacity-100 flex justify-between flex-col md:flex-row p-4 md:p-14 rounded-[10px]`}
+      >
         <div>
           <div className="text-white font-nuntinoFont">
             <h1 className="text-3xl font-extrabold">Form Details</h1>
-            <p className="my-2">Fill up the form below to contact</p>
+            <p className="my-2">Fill up the form to contact</p>
           </div>
           <div className="flex flex-col py-8 font-bold font-nuntinoFont text-white">
             <a
@@ -112,7 +120,11 @@ const SendMessageCard = () => {
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="mt-12 md:mt-0 bg-white w-full md:w-[300px] p-4 md:p-8 rounded-[10px]"
+            className={`${
+              isDarkMode
+                ? "bg-gray-800 text-dark-text"
+                : "bg-[#f7fafc] text-light-text"
+            }  mt-12 md:mt-0 w-full md:w-[300px] p-4 md:p-8 rounded-[10px] outline outline-gray-700`}
           >
             <h1 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
               Your Name
@@ -124,7 +136,7 @@ const SendMessageCard = () => {
               <input
                 type="text"
                 name="user_name"
-                className="w-full pl-10 p-2.5 text-sm rounded-lg  border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block dark:bg-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="w-full pl-10 p-2.5 text-sm rounded-lg  border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Faisal Rehman"
                 required
               />
@@ -139,7 +151,7 @@ const SendMessageCard = () => {
               <input
                 type="email"
                 name="user_email"
-                className="  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="faisalfasi18@gmail.com"
                 required
               />

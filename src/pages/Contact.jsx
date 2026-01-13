@@ -7,11 +7,13 @@ const Contact = () => {
 
   return (
     <div
-      className={`pb-20 ${
+      className={`pb-20 
+        ${
         isDarkMode
           ? "bg-dark-background  text-dark-text"
           : "bg-light-background  text-[#1a202c]"
-      }`}
+      }
+      `}
     >
       <div className="mx-8">
         {/* my project Heading  */}

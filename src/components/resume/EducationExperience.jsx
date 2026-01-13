@@ -24,8 +24,10 @@ const EducationExperience = () => {
                 <h1 className="font-bold my-2">
                   {item.title} ({item.duration})
                 </h1>
+                <p className="font-semibold font-nuntinoFont">
+                  {item.description}
+                </p>
                 <i>{item.location}</i>
-                <p className="">{item.description}</p>
                 <span className="absolute top-1 left-[-10px] w-4 h-4 bg-green-700 rounded-full"></span>
               </li>
             ))}
@@ -48,8 +50,10 @@ const EducationExperience = () => {
                 style={{ borderLeftWidth: "50%" }}
               >
                 <h1 className="font-bold my-2">{experience.title}</h1>
+                <p className="font-semibold font-nuntinoFont">
+                  {experience.description}
+                </p>
                 <i>{experience.location}</i>
-                <p className="">{experience.description}</p>
                 <span className="absolute top-1 left-[-10px] w-4 h-4 bg-green-700 rounded-full"></span>
               </li>
             ))}

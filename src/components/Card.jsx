@@ -5,6 +5,7 @@ import { ThemeContext } from "../context/ThemeContext.jsx";
 // import "./card.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { motion } from "framer-motion";
 
 const bgColors = [
   "#bde3f8",
@@ -36,19 +37,28 @@ const Card = ({ project, index }) => {
   const titlePos = isEven ? "lg:left-0" : "lg:right-0";
 
   return (
-    <div id="project-1" className="relative w-full mt-16 ">
+    <motion.div
+      id="project-1"
+      className="relative w-full mt-16"
+      initial={{ opacity: 0, y: 32 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, delay: 0.05 * (index % 3) }}
+    >
       {/* project 1 starts here 1st part */}
 
       <div
         className={`
           min-h-[100%] min-w-[100%] max-h-full max-w-full ${paddingLeftRight} `}
       >
-        <div
-          className={` flex h-auto w-full max-w-full shadow-lg rounded-t-xl lg:rounded-xl  overflow-hidden aspect-w-16 aspect-h-9 border ${
+        <motion.div
+          className={` flex h-auto w-full max-w-full shadow-2xl rounded-t-xl lg:rounded-xl  overflow-hidden aspect-w-16 aspect-h-9 border ${
             isDarkMode
-              ? "bg-dark-background  text-dark-text border-gray-400"
-              : "bg-light-background  text-[#1a202c] border-black"
+              ? "bg-dark-background  text-dark-text border-gray-700"
+              : "bg-light-background  text-[#1a202c] border-gray-200"
           }`}
+          whileHover={{ scale: 1.01 }}
+          transition={{ duration: 0.25 }}
         >
           <Carousel
             showArrows={true}
@@ -69,27 +79,46 @@ const Card = ({ project, index }) => {
               />
             ))}
           </Carousel>
-        </div>
+        </motion.div>
 
         {/* 2nd part  */}
-        <div
-          className={`lg:w-[45%] lg:absolute lg:top-1/2 opacity-90 ${titlePos} lg:transform lg:-translate-y-1/2 mb-4 px-4 py-6 shadow-lg drop-shadow-lg rounded-b-xl lg:rounded-xl lg:border lg:border-solid lg:border-size border  ${
+        <motion.div
+          className={`lg:w-[45%] lg:absolute lg:top-1/2 opacity-95 ${titlePos} lg:transform lg:-translate-y-1/2 mb-4 px-4 py-6 shadow-xl rounded-b-xl lg:rounded-xl lg:border lg:border-solid lg:border-size border ${
             isDarkMode
-              ? "bg-dark-background  text-dark-text border-gray-400"
-              : "bg-light-background text-[#1a202c] border-black"
+              ? "bg-gray-800/80 backdrop-blur-md text-dark-text border-gray-700"
+              : "bg-white/80 backdrop-blur-md text-[#1a202c] border-gray-200"
           }`}
+          whileHover={{
+            y: -6,
+            boxShadow: isDarkMode
+              ? "0 15px 35px rgba(0,0,0,0.55)"
+              : "0 15px 35px rgba(148,163,184,0.35)",
+          }}
+          transition={{ duration: 0.25 }}
         >
           <div className="flex justify-between items-center  ">
             <h1 className="text-3xl  font-nuntinoFont font-bold ">
               {project.title}
             </h1>
             <span className="flex gap-4">
-              <a href={project.websiteLink} target="_blank">
+              <motion.a
+                href={project.websiteLink}
+                target="_blank"
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 0.96 }}
+                className="focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2AAE66] rounded-full"
+              >
                 <FiExternalLink className="h-7 w-7 text-green-500" />
-              </a>
-              <a href={project.gitHubLink} target="_blank">
+              </motion.a>
+              <motion.a
+                href={project.gitHubLink}
+                target="_blank"
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 0.96 }}
+                className="focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2AAE66] rounded-full"
+              >
                 <AiFillGithub className="h-7 w-7 text-green-500" />
-              </a>
+              </motion.a>
             </span>
           </div>
           <div className="flex flex-wrap gap-2 mt-2 font-bold text-blue-800">
@@ -105,11 +134,11 @@ const Card = ({ project, index }) => {
           </div>
 
           <div className="pt-4 font-poppinFont ">
-            <p>{project.description}</p>
+            <p>{project?.description}</p>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
